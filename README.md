@@ -4,3 +4,6 @@
 
 ## Link with more detailed description of the project:
 - https://docs.google.com/document/d/1MXlts7q49a2XpTxoKE1GZI33XKeeM_rn1wtAZIsgAOE/edit
+
+## Link to figma (included mockup, pitchdesk,...)
+- https://www.figma.com/file/6hy5vjnorUmwtmDqgdmqK7/Layout-NFTs-Music-Web3?type=design&node-id=0%3A1&mode=design&t=VbGPVTkx4WZaEEzj-1
