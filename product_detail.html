@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Name || LB</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
     <script src="https://kit.fontawesome.com/11f75f157a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/product_detail.css">
 </head>
@@ -14,7 +14,7 @@
 <body>
     <header>
 
-        <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
+        <a href="/index.html"><h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2></a>
         <nav class="navigation">
             <a href="#">Explore</a>
             <a href="#">Feed</a>
@@ -30,7 +30,7 @@
 
         <button class=" btnLogin-popup"> <span>Connect Wallet</span></button>
 
-        <a href="#" class="shopping"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" class="shopping"><i class="bx bx-cart"></i></a>
 
 
     </header>
@@ -43,7 +43,7 @@
         <div class="form-box login">
             <h2 class="shadow">CONNECT YOUR WALLET</h2>
             <form action="#">
-                <a href=""><i></i> <span>Phantom Wallet</span></a>
+                <a href="" onclick="connectWallet()"> <img src="img/Phantom-Icon_App_128x128.png" alt="">  <span>Phantom Wallet</span></a>
                 <a href=""><i></i> <span>Candy Wallet</span></a>
                 <a href=""><i></i> <span>Glow</span></a>
                 <a href=""><i></i> <span>Solflare</span></a>
@@ -61,59 +61,44 @@
 
                 <div class="product-left">
                     <div class="cart-product">
-                        <img src="img/banner2.jpg" alt="">
+                        <img src="img/3.jpg" alt="">
+                        <div class="inter-img-time">
+                            <i class='bx bx-play'></i>
+                            <p class="time-start">0.00 <span>/</span></p>
+                            <p class="time-end">0.00</p>
+                        </div>
+                        <div class="inter-img">
+                        <div class="bar3">
+                            <input type="range" id="seek1" min="0" value="0" max="100">
+                            <div class="bar4" id="bar4"></div>
+                            <div class="dot4"></div>
+                        </div>
+                        <div class="icon-title-bar">
+                            <i class='bx bx-volume-mute' style='color:#ffffff' ></i>
+                            <i class='bx bx-fullscreen'style='color:#ffffff' ></i>
+                            <i class='bx bx-dots-horizontal-rounded' style='color:#ffffff' ></i>
+                        </div>
+                    </div>
                         <div class="product-item1">
                             <div class="product-title">
-                                <h3>LIE ANGLE</h3>
-                                <p>0.15 SOL</p>
+                                <svg width="15px" height="15px" viewBox="0 0 101 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M100.48 69.3817L83.8068 86.8015C83.4444 87.1799 83.0058 87.4816 82.5185 87.6878C82.0312 87.894 81.5055 88.0003 80.9743 88H1.93563C1.55849 88 1.18957 87.8926 0.874202 87.6912C0.558829 87.4897 0.31074 87.2029 0.160416 86.8659C0.0100923 86.529 -0.0359181 86.1566 0.0280382 85.7945C0.0919944 85.4324 0.263131 85.0964 0.520422 84.8278L17.2061 67.408C17.5676 67.0306 18.0047 66.7295 18.4904 66.5234C18.9762 66.3172 19.5002 66.2104 20.0301 66.2095H99.0644C99.4415 66.2095 99.8104 66.3169 100.126 66.5183C100.441 66.7198 100.689 67.0067 100.84 67.3436C100.99 67.6806 101.036 68.0529 100.972 68.415C100.908 68.7771 100.737 69.1131 100.48 69.3817ZM83.8068 34.3032C83.4444 33.9248 83.0058 33.6231 82.5185 33.4169C82.0312 33.2108 81.5055 33.1045 80.9743 33.1048H1.93563C1.55849 33.1048 1.18957 33.2121 0.874202 33.4136C0.558829 33.6151 0.31074 33.9019 0.160416 34.2388C0.0100923 34.5758 -0.0359181 34.9482 0.0280382 35.3103C0.0919944 35.6723 0.263131 36.0083 0.520422 36.277L17.2061 53.6968C17.5676 54.0742 18.0047 54.3752 18.4904 54.5814C18.9762 54.7875 19.5002 54.8944 20.0301 54.8952H99.0644C99.4415 54.8952 99.8104 54.7879 100.126 54.5864C100.441 54.3849 100.689 54.0981 100.84 53.7612C100.99 53.4242 101.036 53.0518 100.972 52.6897C100.908 52.3277 100.737 51.9917 100.48 51.723L83.8068 34.3032ZM1.93563 21.7905H80.9743C81.5055 21.7907 82.0312 21.6845 82.5185 21.4783C83.0058 21.2721 83.4444 20.9704 83.8068 20.592L100.48 3.17219C100.737 2.90357 100.908 2.56758 100.972 2.2055C101.036 1.84342 100.99 1.47103 100.84 1.13408C100.689 0.79713 100.441 0.510296 100.126 0.308823C99.8104 0.107349 99.4415 1.24074e-05 99.0644 0L20.0301 0C19.5002 0.000878397 18.9762 0.107699 18.4904 0.313848C18.0047 0.519998 17.5676 0.821087 17.2061 1.19848L0.524723 18.6183C0.267681 18.8866 0.0966198 19.2223 0.0325185 19.5839C-0.0315829 19.9456 0.0140624 20.3177 0.163856 20.6545C0.31365 20.9913 0.561081 21.2781 0.875804 21.4799C1.19053 21.6817 1.55886 21.7896 1.93563 21.7905Z" fill="url(#paint0_linear_174_4403)"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_174_4403" x1="8.52558" y1="90.0973" x2="88.9933" y2="-3.01622" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.08" stop-color="#00000"/>
+                                    <stop offset="0.5" stop-color="#00000"/>
+                                    <stop offset="0.6" stop-color="#00000"/>
+                                    <stop offset="0.72" stop-color="#00000"/>
+                                    <stop offset="0.97" stop-color="#00000"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            <span><p class="product-detail-coin">Chain:</p><p class="product-coin">SOL</p></span> 
                             </div>
                             <div class="product-link">
                                 <a href="#"><i class="fa-solid fa-arrow-up-right-from-square share"></i></a>
-                                <a href="#">183 <button><i class='bx bx-heart'></i></button></a>
+                                <a href="#"><button><i class='bx bx-heart'></i></button></a>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="product-description">
-                        <div class="description-title">
-                            <h2><i class="fa-solid fa-bars-staggered"></i> Description</h2>
-
-                        </div>
-                        <span>By <p>Dany Huy</p></span>
-                        <p>
-                            The Shroud cloud the minds of their enemies,
-                            making it near impossible to tell friend from foe.
-                        </p>
-
-                    </div>
-
-                </div>
-                <div class="product-right">
-
-                    <div class="product-information">
-                        <div class="product-information-title">
-                            <span> <i class="fa-regular fa-eye"></i> 288 Views </span>
-                            <span> <i class="fa-regular fa-heart"></i> 183 Favorites </span>
-                            <span> <i class="fa-solid fa-icons"></i> Music </span>
-                        </div>
-                        <div class="product-information-sale-time">
-                            <span> <i class="fa-regular fa-clock"></i> Sale ends November 1,2023 at 4:35 PM </span>
-                            <div class="product-information-inner">
-                                <div class="product-information-price">
-                                    <p>Current price</p>
-                                    <h3>0.15 SOL</h3>
-                                    <p class="price-hide">$1,920,30</p>
-                                </div>
-                                    <button class="buy">Buy now<i class="fa-solid fa-cart-shopping buy-cart"></i></button>
-                                    <button class="offer">Make offer</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-history-box">
-                        <div class="product-history">
-                            <h3> <i class="fa-solid fa-chart-line"></i> History</h3>
-                            <img src="img/Simple-Canvas-removebg-preview.png" alt="">
                         </div>
                     </div>
 
@@ -135,13 +120,61 @@
                         <div>
                             <h3>Chain</h3>
                             <p>SOLANA</p>
-                       </div>
-                       <div>
+                    </div>
+                    <div>
                         <h3>Creator Earnings</h3>
                         <p>15%</p>
                    </div>
                     </div>
                     </div>
+
+                </div>
+                <div class="product-right">
+                    <div class="detail-name">
+                        <div class="arts-customer">
+                            <p>MESTO</p>
+                            <h3>Leyla</h3>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="product-information">
+                        <div class="product-information-title">
+                            <span> <i class="fa-regular fa-eye"></i> 288 Views </span>
+                            <span> <i class="fa-regular fa-heart"></i> 183 Favorites </span>
+                            <span> <i class="fa-solid fa-icons"></i> Music </span>
+                        </div>
+                        <div class="product-information-sale-time">
+                            <span> <i class="fa-regular fa-clock"></i> Sale ends November 1,2023 at 4:35 PM </span>
+                            <div class="product-information-inner">
+                                <div class="product-information-price">
+                                    <p class="Current-price">Current price</p>
+                                    <h3>0.15 SOL</h3>
+                                    <p class="price-hide">$1,920,30</p>
+                                </div>
+                                <div class="product-information-buy">
+                                    <button class="buy">Buy now<i class="fa-solid fa-cart-shopping buy-cart"></i></button>
+                                    <button class="offer">Make offer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <div class="description-title">
+                            <h2><i class="fa-solid fa-bars-staggered"></i> Description</h2>
+
+                        </div>
+                        <span>By <p>Dany Huy</p></span>
+                        <p class="product-description-title1">
+                            The Shroud cloud the minds of their enemies,
+                            making it near impossible to tell friend from foe.
+                        </p>
+
+                    </div>
+
+                    
 
                 </div>
             </div>
@@ -195,55 +228,53 @@
 
     <footer>
         <div class="container">
-          <div class="footer-content">
-            <div class="footer-logo">
-              <img src="img/logo-removebg-preview.png" alt="">
-              <h3>LazyBees</h3>
-              <p>
-                NFT Music Flatform providing solutions for digital buying and exchange
-              </p>
-            </div>
-            <div class="footer-links">
-                <p>Join the community</p>
-                <div class="links">
-                <a href=""><i class='bx bxl-github'></i></a>
-                <a href=""><i class='bx bxl-discord-alt' ></i></a>
-                <a href=""><i class='bx bxl-twitter' ></i></a>
-                <a href=""><i class='bx bxl-facebook' ></i></a>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo-removebg-preview.png" alt="">
+                    <h3>LazyBees</h3>
+                    <p>
+                        NFT Music Flatform providing solutions for digital buying and exchange
+                    </p>
                 </div>
-            </div>
-            <div class="footer-social">
-               <h3>Stay in the loot</h3>
-               <p>Join our mailing list to stay in 
-                the loop with our newest music releases and 
-                newest things about LB.</p>
-                <div class="login-email">
-                    <input type="text" placeholder="Your email address" name="email address">
-                    <button>Sign up</button>
+                <div class="footer-links">
+                    <p>Join the community</p>
+                    <div class="links">
+                        <a href=""><i class='bx bxl-github'></i></a>
+                        <a href=""><i class='bx bxl-discord-alt'></i></a>
+                        <a href=""><i class='bx bxl-twitter'></i></a>
+                        <a href=""><i class='bx bxl-facebook'></i></a>
+                    </div>
                 </div>
+                <div class="footer-social">
+                    <h3>Stay in the loot</h3>
+                    <p>Join our mailing list to stay in
+                        the loop with our newest music releases and
+                        newest things about LB.</p>
+                    <div class="login-email">
+                        <input type="text" placeholder="Your email address" name="email address">
+                        <button>Sign up</button>
+                    </div>
 
-            </div>
-            <div class="footer-bottom">
+                </div>
+                <div class="footer-bottom">
 
                     <div class="line"> </div>
                     <img src="img/c-removeb.png" alt="">
                     <h4>2023 - LazyBees Team</h4>
-               
+
                     <div class="private">
                         <p>Privacy Policy</p>
                         <p>Terms of Service</p>
                     </div>
-                
+
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
-
-
-
+    </footer>
 
 
     <script src="js/script.js"></script>
+    <script src="js/connectWallet.js"></script>
 </body>
 
 </html>
