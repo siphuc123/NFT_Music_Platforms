@@ -59,7 +59,7 @@ const music = new Audio('audio/1.mp3')
 const songs = [
   {
     id:'1',
-    songName:`At My Worst
+    songName:` At My Worst
     <p class="subtitle">Pink Sweats</p> `,
     poster:"img/1.jpg"
   },
