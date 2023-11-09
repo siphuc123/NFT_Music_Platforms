@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { RiMenu3Line, RiCloseLine, RiShoppingCart2Line, RiSearchEyeLine } from "react-icons/ri";
 import logo from "../../assets/logo-removebg.png";
 import { Link } from "react-router-dom";
 
@@ -19,6 +19,7 @@ const Navbar = () => {
   const handleLogout = () => {
     setUser(false);
   };
+
   const handleLogin = () => {
     setUser(true);
   };
@@ -27,22 +28,34 @@ const Navbar = () => {
     <>
       <div className="wrapper">
         <span className="icon-close">
-            <i className="fa-solid fa-xmark"></i>
+          <i className="fa-solid fa-xmark"></i>
         </span>
         <div className="form-box login">
-            <h2 className="shadow">CONNECT YOUR WALLET</h2>
-            <form action="#">
-                <Link to="/" onClick="connectWallet()"><i></i> <span>Phantom Wallet</span></Link>
-                <Link to="/" onClick={handleLogin}><i></i> <span>Candy Wallet</span></Link>
-                <Link to="/" onClick={handleLogin}><i></i> <span>Glow</span></Link>
-                <Link to="/" onClick={handleLogin}><i></i> <span>Solflare</span></Link>
-                <Link to="/" onClick={handleLogin}><i></i> <span>MetaMask</span></Link>
-                <Link to="/" onClick={handleLogin}><i></i> <span>Coinbase Wallet</span></Link>
+          <h2 className="shadow">CONNECT YOUR WALLET</h2>
+          <form action="#">
+            <Link to="/" onClick="connectWallet()">
+              <i></i> <span>Phantom Wallet</span>
+            </Link>
+            <Link to="/" onClick={handleLogin}>
+              <i></i> <span>Candy Wallet</span>
+            </Link>
+            <Link to="/" onClick={handleLogin}>
+              <i></i> <span>Glow</span>
+            </Link>
+            <Link to="/" onClick={handleLogin}>
+              <i></i> <span>Solflare</span>
+            </Link>
+            <Link to="/" onClick={handleLogin}>
+              <i></i> <span>MetaMask</span>
+            </Link>
+            <Link to="/" onClick={handleLogin}>
+              <i></i> <span>Coinbase Wallet</span>
+            </Link>
 
-                <button className="Show">Show More</button>
-            </form>
+            <button className="Show">Show More</button>
+          </form>
         </div>
-    </div>
+      </div>
       <header className="navbar">
         <div className="navbar-links">
           {/* Logo thương hiệu */}
@@ -61,7 +74,7 @@ const Navbar = () => {
           {/* Thanh tìm kiếm */}
           <div className="navbar-links_container">
             <div className="search-box">
-              <form action="">
+              <form action="#">
                 <input
                   type="text"
                   name="search"
@@ -70,7 +83,7 @@ const Navbar = () => {
                   autoFocus={true}
                 />
                 <button type="submit">
-                  <i className="fa fa-search"></i>
+                  <RiSearchEyeLine></RiSearchEyeLine>
                 </button>
               </form>
             </div>
@@ -99,17 +112,14 @@ const Navbar = () => {
           ) : (
             <>
               <Link to="/">
-                <button
-                  type="button"
-                  className=" btnLogin-popup primary-btn"
-                >
+                <button type="button" className=" btnLogin-popup primary-btn">
                   {" "}
                   <span>Connect Wallet</span>
                 </button>
               </Link>
               <Link to="/register">
-                <button type="button" className="secondary-btn">
-                  Sign Up
+                <button type="button" className="secondary-btn shopping">
+                  <RiShoppingCart2Line></RiShoppingCart2Line>
                 </button>
               </Link>
             </>
