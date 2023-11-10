@@ -1,0 +1,116 @@
+:root {
+  --main-color: #24252D ;
+  --Section1-color: #2A2D3A;
+  --Section2-color: #7D7C7C;
+  --Section3-color: #191717;
+  --button-color:#F31559;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--main-color);
+}
+
+.sidebar-right {
+  color: rgb(0, 0, 0);
+  width: 300px; 
+  float: right; 
+  align-items: center;
+  color: white;
+}
+
+.image img {
+  width: 35px; 
+  height: 35px;
+  border-radius: 50%; 
+  margin-right: 10px; 
+  float: left;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.content-button {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+  
+}
+
+button{
+  background-color: var(--button-color);
+}
+
+.content-button button {
+  width: 100px;
+  height: 30px;
+  color: white;
+}
+
+.content p{
+  font-size: 12px;
+}
+.item {
+  display: flex;
+  align-items: center; 
+}
+
+p{
+  font-size: 20px;
+}
+
+/*main*/
+main {
+  max-width: 100̀;
+  float: left;
+  background-color: var(--main-color);
+}
+a {
+  text-decoration: none;
+  list-style: none;
+}
+.navigation a {
+  position: relative;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
+  margin-right: 40px;
+
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.images img {
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%; 
+  margin-right: 10px; 
+  float: left;
+}
+
+.sign-post{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
