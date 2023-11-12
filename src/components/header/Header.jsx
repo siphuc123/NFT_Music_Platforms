@@ -1,78 +1,246 @@
 import React from 'react'
 import './header.css'
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import seller1 from '../../assets/seller1.jpg'
-import seller2 from '../../assets/seller2.png'
-import seller3 from '../../assets/seller3.png'
-import seller4 from '../../assets/seller4.png'
-import seller5 from '../../assets/seller5.png'
-import seller6 from '../../assets/seller6.jpg'
-import verify from '../../assets/verify.png'
-import coin from '../../assets/coin.png'
+// import "slick-carousel/slick/slick.css"; 
+// import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import seller1 from '../../assets/seller1.jpg'
+// import seller2 from '../../assets/seller2.png'
+// import seller3 from '../../assets/seller3.png'
+// import seller4 from '../../assets/seller4.png'
+// import seller5 from '../../assets/seller5.png'
+// import seller6 from '../../assets/seller6.jpg'
+// import verify from '../../assets/verify.png'
+// import coin from '../../assets/coin.png'
 import { Link  } from 'react-router-dom';
+// icon
+import { AiOutlineHeart } from "react-icons/ai";
+import { BiPlayCircle, BiSkipNext, BiSkipPrevious, BiSolidVolumeFull } from 'react-icons/bi';
+import { BsFillPlayFill } from 'react-icons/bs';
+
+
+// ------- image -------
+import jpg1 from '../../assets/1.jpg'
+/*music play end*/
+import jpg2 from '../../assets/2.jpg'
+import jpg4 from '../../assets/4.jpg'
+import jpg6 from '../../assets/6.jpg'
+import banner0 from '../../assets/banner0.jpg'
+
+
 const Header = () => {
-  var settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    swipeToSlide:true,
-    responsive: [
-      {
-        breakpoint: 1160,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          swipeToSlide:true,
-        }
-      },
-      {
-        breakpoint: 950,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          swipeToSlide:true,
-        }
-      },
-      {
-        breakpoint: 750,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        }
-      },
-      {
-        breakpoint: 550,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 470,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          variableWidth: true,
-        }
-      }
-    ]
-  };
+  // var settings = {
+  //   dots: false,
+  //   infinite: false,
+  //   speed: 500,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
+  //   swipeToSlide:true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1160,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         slidesToScroll: 1,
+  //         swipeToSlide:true,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 950,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         swipeToSlide:true,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 750,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         initialSlide: 2,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 550,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 470,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 400,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         variableWidth: true,
+  //       }
+  //     }
+  //   ]
+  // };
   return (
     <div className='header section__padding'>
-      <div className="header-content">
+      /*music play*/
+        <div className="romuoter">
+            <div className="master_play">
+                <div className="wave">
+                    <div className="wave1"></div>
+                    <div className="wave1"></div>
+                    <div className="wave1"></div>
+                </div>
+                <img src={jpg1} alt="Astis" id="poster_master_play"/>
+                <h5 id="title"> 
+                    <div className="subtitle"></div>
+                </h5>
+                <div className="icon">
+                    <BiSkipPrevious id="back"></BiSkipPrevious>
+                    <BsFillPlayFill className='bx bx-play' id="masterPlay"></BsFillPlayFill>
+                    <BiSkipNext className='bx bx-skip-next' id="next"></BiSkipNext>
+                </div>
+                <span id="currentStart">0:00</span>
+                <div className="bar">
+                    <input type="range" id="seek" min="0" value="0" max="100"/>
+                    <div className="bar2" id="bar2"></div>
+                    <div className="dot"></div>
+                </div>
+                <span id="currentEnd">0:00</span>
+              
+                <div className="vol">
+                    <BiSolidVolumeFull id="vol_icon"></BiSolidVolumeFull>
+                    <input type="range" id="vol" min="0" value="30" max="100"/>
+                    <div className="vol_bar"></div>
+                    <div className="dot" id="vol_dot"></div>
+                </div>
+                <div className="romuoter-heart">
+                  <AiOutlineHeart className='bx bx-heart'></AiOutlineHeart>
+                </div>
+                <div className="romuoter-collect">
+                    <button>Collect</button>
+                </div>
+            </div> 
+        </div>
+
+        /*music play end*/
+
+        <section className="banner-group">
+            <div className="banner-box">
+                <div className="slideshow-container">
+                    <div className="mySlides1">
+                        <img src={jpg6}/>
+                    </div>
+
+                    <div className="mySlides1">
+                        <img src={jpg4}/>
+                    </div>
+
+                    <div className="mySlides1">
+                        <img src={jpg2}/>
+                    </div>
+
+
+                </div>
+
+
+                <div className="banner-show ">
+                    <img className="iner0-bannr" src={jpg6} alt=""/>
+                    <div className="banner-show-box">
+                        <div className="banner-inner-show">
+                            <div className="play-music-out">
+                                <button className="play-pause">
+                                    <BiPlayCircle className='bx playListPlay bx-play-circle 'id="6"></BiPlayCircle>
+                                </button>
+                                <h5>Million Days</h5>
+                                <div>
+                                    <p className="name-ast">Sabai. 45 mints</p>
+                                    <p className="show-time-out">end in 3d</p>
+                                </div>
+                                <button className="collec">Collect now</button>
+                            </div>
+                        </div>
+                        <div className="user-show-baner">
+                            <div className="user-list-banner">
+                              <div className="user-list-banner-box">
+                                  <div className="username-list-banner">
+                                      <h5>Name artist</h5>
+                                      <p>8 editions</p>
+                                  </div>
+                                  <div className="img-user-banner">
+                                      <img src={banner0} alt=""/>
+                                      <p className="quantity">1</p>
+                                  </div>
+                              </div>
+                              <div className="user-list-banner-box">
+                                  <div className="username-list-banner">
+                                      <h5>Name artist</h5>
+                                      <p>8 editions</p>
+                                  </div>
+                                  <div className="img-user-banner">
+                                      <img src={banner0} alt=""/>
+                                      <p className="quantity">2</p>
+                                  </div>
+                              </div>
+                              <div className="user-list-banner-box">
+                                  <div className="username-list-banner">
+                                      <h5>Name artist</h5>
+                                      <p>8 editions</p>
+                                  </div>
+                                  <div className="img-user-banner">
+                                      <img src={banner0} alt=""/>
+                                      <p className="quantity">3</p>
+                                  </div>
+                              </div>
+                              <div className="user-list-banner-box">
+                                  <div className="username-list-banner">
+                                      <h5>Name artist</h5>
+                                      <p>8 editions</p>
+                                  </div>
+                                  <div className="img-user-banner">
+                                      <img src={banner0} alt=""/>
+                                      <p className="quantity">4</p>
+                                  </div>
+                              </div>
+                              <div className="user-list-banner-box">
+                                  <div className="username-list-banner">
+                                      <h5>Name artist</h5>
+                                      <p>8 editions</p>
+                                  </div>
+                                  <div className="img-user-banner">
+                                      <img src={banner0} alt=""/>
+                                      <p className="quantity">5</p>
+                                  </div>
+                              </div>
+                              <div className="user-list-banner-box">
+                                  <div className="username-list-banner">
+                                      <h5>Name artist</h5>
+                                      <p>8 editions</p>
+                                  </div>
+                                  <div className="img-user-banner">
+                                      <img src={banner0} alt=""/>
+                                      <p className="quantity">6</p>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+        </section>
+    </div>
+  )
+}
+
+export default Header
+
+{/* <div className="header-content">
         <div>
           <h1>Discover, collect, and sell extraordinary NFTs</h1>
           <img className='shake-vertical' src={coin} alt="" />
@@ -148,9 +316,4 @@ const Header = () => {
               <p className='slider-card-price'>3.548 <span>ETH</span></p>
             </div>
         </Slider>
-      </div>
-    </div>
-  )
-}
-
-export default Header
+      </div> */}
