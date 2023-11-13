@@ -988,6 +988,48 @@ tbody {
     min-width: 100%;
 }
 
+.dashboard .adventure {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+}
+
+.dashboard .adventure .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard .adventure .menu .circle {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard .adventure .menu .circle .cursor {
+    font-size: 25px;
+    color: #8289D2;
+    margin-right: 10px;
+}
+
+.dashboard .adventure .menu .circle .cursor .bi {
+    text-align: center;
+    display: inline-block;
+    background-color: #1F0B2E;
+    padding: 4px 9px;
+    border-radius: 50%;
+}
+
+.dashboard .adventure .menu .circle span {
+    font-size: 16px;
+}
+.dashboard .adventure .menu .notify {
+    font-size: 14px;
+    color: #fff;
+    border-radius: 25px;
+    background-color: #5F66C0;
+    padding: 4px 20px;
+}
+
 .musiclist {
     display: flex;
     height: 400px;
