@@ -4,26 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile || LB</title>
+    <title>Profile // LazyBees</title>
+    <link rel="icon" type="image/x-icon" href="img/logo-removebg-preview.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
     <script src="https://kit.fontawesome.com/11f75f157a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/Profile.css">
-    <link rel="stylesheet" href="css/show-hide.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
         integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/Profile.css">
+    <link rel="stylesheet" href="css/show-hide.css">
 </head>
 
 <body>
     <header>
 
-        <a href="/index.html"><h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2></a>
+        <a href="/index.html">
+            <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
+        </a>
         <nav class="navigation">
-            <a href="#">Explore</a>
-            <a href="#">Feed</a>
-            <a href="#">Charts</a>
+            <a href="explore.html">Explore</a>
+            <a href="feed.html">Feed</a>
+            <a href="usercollection.html">Charts</a>
         </nav>
 
         <div class="search-box">
@@ -32,10 +35,15 @@
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
-   
-        <button class=" btnLogin-popup " > <span>Connect Wallet</span></button>
-    
-        
+
+        <div id="otherButton">
+            <div class="After-logging-in">
+                <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
+                <p>13 SOL</p>
+            </div>
+        </div>
+
+
         <a href="#" class="shopping"><i class="bx bx-cart"></i></a>
 
 
@@ -49,8 +57,11 @@
         <div class="form-box login">
             <h2 class="shadow">CONNECT YOUR WALLET</h2>
             <form action="#">
-                <a href="" onclick="connectWallet()"> <img src="img/Phantom-Icon_App_128x128.png" alt="">  <span>Phantom Wallet</span></a>
-                <a href=""><i></i> <pan>Candy Wallet</span></a>
+                <a href="" onclick="connectWallet()"> <img src="img/Phantom-Icon_App_128x128.png" alt=""> <span>Phantom
+                        Wallet</span></a>
+                <a href=""><i></i>
+                    <pan>Candy Wallet</span>
+                </a>
                 <a href=""><i></i> <span>Glow</span></a>
                 <a href=""><i></i> <span>Solflare</span></a>
                 <a href=""><i></i> <span>MetaMask</span></a>
@@ -63,14 +74,14 @@
 
     <div class="banner-use-box">
         <div class="change-img-banners">
-        <label for="fileInput" id="fileLabel">
-            <img id="image" class="banner-use" src="" alt="" style="object-fit: cover;">
-        </label>
-        <input type="file" id="fileInput" accept="image/*">
-        <img id="image" src="" alt="Hình ảnh" style="display: none;">
-        <button id="resetButton" style="display: none;">Reset</button>
+            <label for="fileInput" id="fileLabel">
+                <img id="image" class="banner-use" src="" alt="" style="object-fit: cover;">
+            </label>
+            <input type="file" id="fileInput" accept="image/*">
+            <img id="image" src="" alt="Hình ảnh" style="display: none;">
+            <button id="resetButton" style="display: none;">Reset</button>
 
-        <button class="hiden-edit"><i class='bx bx-pencil'></i></button>
+            <button class="hiden-edit"><i class='bx bx-pencil'></i></button>
         </div>
         <div class="photo-user">
             <img src="img/NFT-1.jpg" alt="">
@@ -96,7 +107,7 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <p>
+                <p>
                     HRHyTZJ3u.....WgL2
                 </p>
                 </p>
@@ -115,146 +126,139 @@
         <section class="information">
             <div class="information-option">
                 <ul>
-                    <li onclick="showPage(1)" class="active">Items Collected <p>0</p></li>
+                    <li onclick="showPage(1)" class="active">Items Collected <p>0</p>
+                    </li>
                     <li onclick="showPage(2)">Offers made</li>
                     <li onclick="showPage(3)">Deals</li>
                     <li onclick="showPage(4)">Favorited</li>
-                    <li onclick="showPage(5)">Created <p>7 Ss</p></li>
+                    <li onclick="showPage(5)">Created <p>7 Ss</p>
+                    </li>
                     <li onclick="showPage(6)">Activity</li>
                 </ul>
             </div>
 
             <div class="page active" id="page1">
-            <div class="collected-box">
-                <div class="collected">
-                    <button class="sliders"><i class="fa-solid fa-sliders fa-rotate-270"></i></button>
-                    <button class="Status"> <a href="">Status</a><i class='bx bx-chevron-down Status-dow'></i></button>
-                    <div class="search-collectl-item">
-                        <form action="">
-                            <i class='bx bx-search-alt-2'></i>
-                            <input type="text" placeholder="Search by name">
-                        </form>
-                    </div>
-                    <button class="Recently-created"><a href="">Recently created</a><i
-                            class='bx bx-chevron-down recently'></i></button>
-                </div>
-
-                <div>
-
-                </div>
-            </div>
-
-            <div class="collect-item-box">
-                <h3>
-                    <p>0</p>Items
-                </h3>
-                <div class="collect-item">
-
-                    <div class="show-items-collectd">
-                        <h2>No items found for this search</h2>
-                        <button>Back to all items</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="page" id="page2">
-            <div class="collected-box">
-                <div class="collected">
-                    <button class="collected-filter"><i class='bx bx-filter'></i></button>
-                    <button class="Status"> <a href="">Type</a><i class='bx bx-chevron-down Status-dow'></i></button>       
-                    <button class="Status"> <a href="">Status</a><i class='bx bx-chevron-down Status-dow'></i></button>           
-                </div>
-                <div>
-
-                </div>
-            </div>
-
-            <div class="collect-item-box">
-                <div class="collect-item">
-
-                    <div class="show-items-collectd">
-                        <h2>No deals to display</h2>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-
-
-        <div class="page" id="page3">
-            <div class="collected-box">
-                <div class="collected1">
-                    <div class="collected-deals-title">
-                        <h2>0 deals</h2>
-                    </div>
-                    <button class="Status1"> <a href="">All Deals</a><i class='bx bx-chevron-down Status-dow'></i></button>       
-                    <button class="Status1"> <a href="">Most Recent</a><i class='bx bx-chevron-down Status-dow'></i></button>
-                    <div class="collected-make-deal-box">           
-                    <button class="collected-make-deal"> <a href="">Make a deal</a></button>
-                    </div>
-                </div>
-                <div>
-
-                </div>
-            </div>
-
-            <div class="collect-item-box1">
-                <div class="collect-sidebar">
-                    <ul>
-                        <li><a href="">All</a></li>
-                        <li><a href="">Active</a></li>
-                        <li><a href="">Acceptrd</a></li>
-                        <li><a href="">Canceled</a></li>
-                        <li><a href="">Inactive</a></li>
-                        <li><a href="">Expired</a></li>
-                    </ul>
-                </div>
-                <div class="collect-item1">
-                    <div class="show-items-collectd1">
-                        <h2>No deals to display</h2>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <div class="page" id="page4">
-            <div class="scrollable-frame" id="scrollable-frame">
-                <div class="scrollable-frame-box">
-                    <div class="favorite-item">
-                    <div class="favorite-item-box">
-                        <img src="img/17.jpg" alt="">
-                        <div class="favorite-item-title">
-                            <a href="">
-                            <h2>Name</h2>
-                            <h3>Name Album</h3>
-                            <span><p>1,202 SOL</p>|<p>Last sale: 1,01</p></span>
-                            </a>
+                <div class="collected-box">
+                    <div class="collected">
+                        <button class="sliders"><i class="fa-solid fa-sliders fa-rotate-270"></i></button>
+                        <button class="Status"> <a href="">Status</a><i
+                                class='bx bx-chevron-down Status-dow'></i></button>
+                        <div class="search-collectl-item">
+                            <form action="">
+                                <i class='bx bx-search-alt-2'></i>
+                                <input type="text" placeholder="Search by name">
+                            </form>
                         </div>
-                        <div class="favorite-item-title-buy">
-                            <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
+                        <button class="Recently-created"><a href="">Recently created</a><i
+                                class='bx bx-chevron-down recently'></i></button>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+
+                <div class="collect-item-box">
+                    <h3>
+                        <p>0</p>Items
+                    </h3>
+                    <div class="collect-item">
+
+                        <div class="show-items-collectd">
+                            <h2>No items found for this search</h2>
+                            <button>Back to all items</button>
                         </div>
                     </div>
-                    </div>
+                </div>
+            </div>
 
-                    <div class="favorite-item">
-                        <div class="favorite-item-box">
-                            <img src="img/17.jpg" alt="">
-                            <div class="favorite-item-title">
-                                <a href="">
-                                <h2>Name</h2>
-                                <h3>Name Album</h3>
-                                <span><p>1,202 SOL</p>|<p>Last sale: 1,01</p></span>
-                                </a>
+            <div class="page" id="page2">
+                <div class="collected-box">
+                    <div class="collected">
+                        <button class="collected-filter"><i class='bx bx-filter'></i></button>
+                        <button class="Status"> <a href="">Type</a><i
+                                class='bx bx-chevron-down Status-dow'></i></button>
+                        <button class="Status"> <a href="">Status</a><i
+                                class='bx bx-chevron-down Status-dow'></i></button>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+
+                <div class="collect-item-box">
+                    <div class="collect-item">
+
+                        <div class="show-items-collectd">
+                            <h2>No deals to display</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+            <div class="page" id="page3">
+                <div class="collected-box">
+                    <div class="collected1">
+                        <div class="collected-deals-title">
+                            <h2>0 deals</h2>
+                        </div>
+                        <button class="Status1"> <a href="">All Deals</a><i
+                                class='bx bx-chevron-down Status-dow'></i></button>
+                        <button class="Status1"> <a href="">Most Recent</a><i
+                                class='bx bx-chevron-down Status-dow'></i></button>
+                        <div class="collected-make-deal-box">
+                            <button class="collected-make-deal"> <a href="">Make a deal</a></button>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+
+                <div class="collect-item-box1">
+                    <div class="collect-sidebar">
+                        <ul>
+                            <li><a href="">All</a></li>
+                            <li><a href="">Active</a></li>
+                            <li><a href="">Acceptrd</a></li>
+                            <li><a href="">Canceled</a></li>
+                            <li><a href="">Inactive</a></li>
+                            <li><a href="">Expired</a></li>
+                        </ul>
+                    </div>
+                    <div class="collect-item1">
+                        <div class="show-items-collectd1">
+                            <h2>No deals to display</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="page" id="page4">
+                <div class="scrollable-frame" id="scrollable-frame">
+                    <div class="scrollable-frame-box">
+                        <div class="favorite-item">
+                            <div class="favorite-item-box">
+                                <img src="img/17.jpg" alt="">
+                                <div class="favorite-item-title">
+                                    <a href="">
+                                        <h2>Name</h2>
+                                        <h3>Name Album</h3>
+                                        <span>
+                                            <p>1,202 SOL</p>|<p>Last sale: 1,01</p>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="favorite-item-title-buy">
+                                    <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
+                                </div>
                             </div>
-                            <div class="favorite-item-title-buy">
-                                <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
-                            </div>
-                        </div>
                         </div>
 
                         <div class="favorite-item">
@@ -262,73 +266,99 @@
                                 <img src="img/17.jpg" alt="">
                                 <div class="favorite-item-title">
                                     <a href="">
-                                    <h2>Name</h2>
-                                    <h3>Name Album</h3>
-                                    <span><p>1,202 SOL</p>|<p>Last sale: 1,01</p></span>
+                                        <h2>Name</h2>
+                                        <h3>Name Album</h3>
+                                        <span>
+                                            <p>1,202 SOL</p>|<p>Last sale: 1,01</p>
+                                        </span>
                                     </a>
                                 </div>
                                 <div class="favorite-item-title-buy">
                                     <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
                                 </div>
                             </div>
-                            </div>
+                        </div>
 
-                            <div class="favorite-item">
-                                <div class="favorite-item-box">
-                                    <img src="img/17.jpg" alt="">
-                                    <div class="favorite-item-title">
-                                        <a href="">
+                        <div class="favorite-item">
+                            <div class="favorite-item-box">
+                                <img src="img/17.jpg" alt="">
+                                <div class="favorite-item-title">
+                                    <a href="">
                                         <h2>Name</h2>
                                         <h3>Name Album</h3>
-                                        <span><p>1,202 SOL</p>|<p>Last sale: 1,01</p></span>
-                                        </a>
-                                    </div>
-                                    <div class="favorite-item-title-buy">
-                                        <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
-                                    </div>
+                                        <span>
+                                            <p>1,202 SOL</p>|<p>Last sale: 1,01</p>
+                                        </span>
+                                    </a>
                                 </div>
+                                <div class="favorite-item-title-buy">
+                                    <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="favorite-item">
-                                    <div class="favorite-item-box">
-                                        <img src="img/17.jpg" alt="">
-                                        <div class="favorite-item-title">
-                                            <a href="">
-                                            <h2>Name</h2>
-                                            <h3>Name Album</h3>
-                                            <span><p>1,202 SOL</p>|<p>Last sale: 1,01</p></span>
-                                            </a>
-                                        </div>
-                                        <div class="favorite-item-title-buy">
-                                            <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
-                                        </div>
-                                    </div>
-                                    </div>
+                        <div class="favorite-item">
+                            <div class="favorite-item-box">
+                                <img src="img/17.jpg" alt="">
+                                <div class="favorite-item-title">
+                                    <a href="">
+                                        <h2>Name</h2>
+                                        <h3>Name Album</h3>
+                                        <span>
+                                            <p>1,202 SOL</p>|<p>Last sale: 1,01</p>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="favorite-item-title-buy">
+                                    <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
+                                </div>
+                            </div>
+                        </div>
 
-                                    <div class="favorite-item">
-                                        <div class="favorite-item-box">
-                                            <img src="img/17.jpg" alt="">
-                                            <div class="favorite-item-title">
-                                                <a href="">
-                                                <h2>Name</h2>
-                                                <h3>Name Album</h3>
-                                                <span><p>1,202 SOL</p>|<p>Last sale: 1,01</p></span>
-                                                </a>
-                                            </div>
-                                            <div class="favorite-item-title-buy">
-                                                <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
-                                            </div>
-                                        </div>
-                                        </div>
+                        <div class="favorite-item">
+                            <div class="favorite-item-box">
+                                <img src="img/17.jpg" alt="">
+                                <div class="favorite-item-title">
+                                    <a href="">
+                                        <h2>Name</h2>
+                                        <h3>Name Album</h3>
+                                        <span>
+                                            <p>1,202 SOL</p>|<p>Last sale: 1,01</p>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="favorite-item-title-buy">
+                                    <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="favorite-item">
+                            <div class="favorite-item-box">
+                                <img src="img/17.jpg" alt="">
+                                <div class="favorite-item-title">
+                                    <a href="">
+                                        <h2>Name</h2>
+                                        <h3>Name Album</h3>
+                                        <span>
+                                            <p>1,202 SOL</p>|<p>Last sale: 1,01</p>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="favorite-item-title-buy">
+                                    <button><a href="#">Buy now</a><i class='bx bx-cart-download'></i></button>
+                                </div>
+                            </div>
+                        </div>
 
 
 
+                    </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="page" id="page5"></div>
-        <div class="page" id="page6"></div>
+            </div>
+            <div class="page" id="page5"></div>
+            <div class="page" id="page6"></div>
         </section>
 
 
@@ -347,10 +377,10 @@
                 <div class="footer-links">
                     <p>Join the community</p>
                     <div class="links">
-                        <a href=""><i class='bx bxl-github'></i></a>
-                        <a href=""><i class='bx bxl-discord-alt'></i></a>
-                        <a href=""><i class='bx bxl-twitter'></i></a>
-                        <a href=""><i class='bx bxl-facebook'></i></a>
+                        <a href="https://github.com/siphuc123/NFT_Music_Platforms"><i class='bx bxl-github'></i></a>
+                        <a href="https://discord.gg/n3JCcvXK"><i class='bx bxl-discord-alt'></i></a>
+                        <a href="https://twitter.com/BeesLazy"><i class='bx bxl-twitter'></i></a>
+                        <a href=""><i class='bx bxl-telegram'></i></a>
                     </div>
                 </div>
                 <div class="footer-social">
@@ -380,7 +410,7 @@
         </div>
     </footer>
 
-   
+
 
 
 

@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LazyBees - Music NFTs</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="img/logo-removebg-preview.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="js/connectWallet.js">
     <script src="https://kit.fontawesome.com/11f75f157a.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/show-hide.css">
-    <link href="js/connectWallet.js"></link>
 </head>
 
 <body>
     <header>
-        <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
+        <a href="/index.html">
+            <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
+        </a>
         <nav class="navigation">
-            <a href="#">Explore</a>
+            <a href="explore.html">Explore</a>
             <a href="feed.html">Feed</a>
-            <a href="#">Charts</a>
+            <a href="usercollection.html">Charts</a>
         </nav>
 
         <div class="search-box">
@@ -50,12 +53,16 @@
         <div class="form-box login">
             <h2 class="shadow">CONNECT YOUR WALLET</h2>
             <form action="#">
-                <a href="" onclick="connectWallet()"><img src="img/Phantom-Icon_App_128x128.png" alt=""> <span>Phantom Wallet</span></a>
-                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#walletconnect" alt=""> <span>Candy Wallet</span></a>
+                <a href="" onclick="connectWallet()"><img src="img/Phantom-Icon_App_128x128.png" alt=""> <span>Phantom
+                        Wallet</span></a>
+                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#walletconnect" alt="">
+                    <span>Candy Wallet</span></a>
                 <a href=""><img src="img/Glow_Icon.png" alt=""> <span>Glow</span></a>
-                <a href=""><img src="img/solflare_Icon.png" alt=""> <span>Solflare</span></a>
-                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#metamask" alt=""> <span>MetaMask</span></a>
-                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#coinbase" alt=""> <span>Coinbase Wallet</span></a>
+                <a href=""><img src="img/soflare_Icon.png" alt=""> <span>Solflare</span></a>
+                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#metamask" alt="">
+                    <span>MetaMask</span></a>
+                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#coinbase" alt="">
+                    <span>Coinbase Wallet</span></a>
 
                 <button class="Show">Show More</button>
             </form>
@@ -87,7 +94,7 @@
                     <div class="dot"></div>
                 </div>
                 <span id="currentEnd">0:00</span>
-              
+
                 <div class="vol">
                     <i class='bx bx-volume-full' id="vol_icon"></i>
                     <input type="range" id="vol" min="0" value="30" max="100">
@@ -101,7 +108,7 @@
                     <button>Collect</button>
                 </div>
             </div>
-            
+
         </div>
 
         /*music play end*/
@@ -222,10 +229,10 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
-                                </a>    
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
+                                </a>
                             </div>
                             <div class="ranking-playorpause">
                                 <i class='bx playListPlay bx-play-circle ' id="1"></i>
@@ -243,9 +250,9 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
                                 </a>
                             </div>
                             <div class="ranking-playorpause">
@@ -264,9 +271,9 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
                                 </a>
                             </div>
                             <div class="ranking-playorpause">
@@ -285,9 +292,9 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
                                 </a>
                             </div>
                             <div class="ranking-playorpause">
@@ -306,9 +313,9 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
                                 </a>
                             </div>
                             <div class="ranking-playorpause">
@@ -334,9 +341,9 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
                                 </a>
                             </div>
                             <div class="ranking-playorpause1">
@@ -355,9 +362,9 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
                                 </a>
                             </div>
                             <div class="ranking-playorpause1">
@@ -376,9 +383,9 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
                                 </a>
                             </div>
                             <div class="ranking-playorpause1">
@@ -397,9 +404,9 @@
                             <img src="" alt="">
                             <div class="name-rank-cus-ast">
                                 <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
+                                    <h5>Name Music
+                                        <p class="subtitle">Name Artist</p>
+                                    </h5>
                                 </a>
                             </div>
                             <div class="ranking-playorpause1">
@@ -416,15 +423,15 @@
                         <div class="music-ranking">
                             <span>10</span>
                             <div class="fixer-position">
-                            <img src="" alt="">
-                            <div class="name-rank-cus-ast">
-                                <a href="product_detail.html">
-                                <h5>Name Music
-                                    <p class="subtitle">Name Artist</p>
-                                </h5>
-                                </a>
+                                <img src="" alt="">
+                                <div class="name-rank-cus-ast">
+                                    <a href="product_detail.html">
+                                        <h5>Name Music
+                                            <p class="subtitle">Name Artist</p>
+                                        </h5>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
                             <div class="ranking-playorpause1">
                                 <i class='bx playListPlay bx-play-circle ' id="10"></i>
                             </div>
@@ -467,9 +474,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="option-in-music">
                                                 <i class='bx bx-heart'></i>
@@ -494,9 +501,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="option-in-music">
                                                 <i class='bx bx-heart'></i>
@@ -521,9 +528,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="option-in-music">
                                                 <i class='bx bx-heart'></i>
@@ -548,9 +555,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="option-in-music">
                                                 <i class='bx bx-heart'></i>
@@ -582,9 +589,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="option-in-music">
                                                 <i class='bx bx-heart'></i>
@@ -690,7 +697,7 @@
         <section class="Show-music-playlist">
             <h2>Recent Drops</h2>
             <div>
-                <aside class="box_content1" >
+                <aside class="box_content1">
                     <setction class="status1">
 
                         <div class="myStt1">
@@ -704,7 +711,7 @@
 
                         </div>
                     </setction>
-                    
+
                     <div class="idea1">
                         <nav class="dashboard1 first1">
                             <div class="musiclist">
@@ -713,9 +720,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="recent-option">
                                                 <p class="Recentprice">0.9 SOL</p>
@@ -729,7 +736,7 @@
                                             <img class="recentimg1" src="img/banner3.jpg" alt="">
                                             <img class="recentimg2" src="img/banner3.jpg" alt="">
                                             <div class="recent-title">
-                                                <p >12 mints</p>
+                                                <p>12 mints</p>
                                             </div>
                                         </div>
                                     </li>
@@ -739,9 +746,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="recent-option">
                                                 <p class="Recentprice">0.9 SOL</p>
@@ -755,7 +762,7 @@
                                             <img class="recentimg1" src="img/banner3.jpg" alt="">
                                             <img class="recentimg2" src="img/banner3.jpg" alt="">
                                             <div class="recent-title">
-                                                <p >12 mints</p>
+                                                <p>12 mints</p>
                                             </div>
                                         </div>
                                     </li>
@@ -765,9 +772,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="recent-option">
                                                 <p class="Recentprice">0.9 SOL</p>
@@ -781,7 +788,7 @@
                                             <img class="recentimg1" src="img/banner3.jpg" alt="">
                                             <img class="recentimg2" src="img/banner3.jpg" alt="">
                                             <div class="recent-title">
-                                                <p >12 mints</p>
+                                                <p>12 mints</p>
                                             </div>
                                         </div>
                                     </li>
@@ -791,9 +798,9 @@
                                         <img src="" alt="" class="musiclist-imgage">
                                         <div class="musiclist-cus-ast">
                                             <a href="product_detail.html">
-                                            <h5>
-                                                <p class="subtitle"></p>
-                                            </h5>
+                                                <h5>
+                                                    <p class="subtitle"></p>
+                                                </h5>
                                             </a>
                                             <div class="recent-option">
                                                 <p class="Recentprice">0.9 SOL</p>
@@ -807,7 +814,7 @@
                                             <img class="recentimg1" src="img/banner3.jpg" alt="">
                                             <img class="recentimg2" src="img/banner3.jpg" alt="">
                                             <div class="recent-title">
-                                                <p >12 mints</p>
+                                                <p>12 mints</p>
                                             </div>
                                         </div>
                                     </li>
@@ -816,116 +823,116 @@
 
 
                             </div>
-                            
-                            
+
+
 
                         </nav>
 
                         <nav class="dashboard1">
-                            <div class="musiclist">  
-                            <div class="musiclist-box">
-                                <li class="songItem">
-                                    <img src="" alt="" class="musiclist-imgage">
-                                    <div class="musiclist-cus-ast">
-                                        <h5>
-                                            <p class="subtitle"></p>
-                                        </h5>
-                                        <div class="recent-option">
-                                            <p class="Recentprice">0.9 SOL</p>
+                            <div class="musiclist">
+                                <div class="musiclist-box">
+                                    <li class="songItem">
+                                        <img src="" alt="" class="musiclist-imgage">
+                                        <div class="musiclist-cus-ast">
+                                            <h5>
+                                                <p class="subtitle"></p>
+                                            </h5>
+                                            <div class="recent-option">
+                                                <p class="Recentprice">0.9 SOL</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="play_pause_hover">
-                                        <i class='bx playListPlay bx-play-circle ' id="23"></i>
-                                    </div>
-                                    <div class="fress-fan">
-                                        <img class="recentimg" src="img/banner3.jpg" alt="">
-                                        <img class="recentimg1" src="img/banner3.jpg" alt="">
-                                        <img class="recentimg2" src="img/banner3.jpg" alt="">
-                                        <div class="recent-title">
-                                            <p >12 mints</p>
+                                        <div class="play_pause_hover">
+                                            <i class='bx playListPlay bx-play-circle ' id="23"></i>
                                         </div>
-                                    </div>
-                                </li>
-                            </div>
-                            <div class="musiclist-box">
-                                <li class="songItem">
-                                    <img src="" alt="" class="musiclist-imgage">
-                                    <div class="musiclist-cus-ast">
-                                        <h5>
-                                            <p class="subtitle"></p>
-                                        </h5>
-                                        <div class="recent-option">
-                                            <p class="Recentprice">0.9 SOL</p>
+                                        <div class="fress-fan">
+                                            <img class="recentimg" src="img/banner3.jpg" alt="">
+                                            <img class="recentimg1" src="img/banner3.jpg" alt="">
+                                            <img class="recentimg2" src="img/banner3.jpg" alt="">
+                                            <div class="recent-title">
+                                                <p>12 mints</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="play_pause_hover">
-                                        <i class='bx playListPlay bx-play-circle ' id="24"></i>
-                                    </div>
-                                    <div class="fress-fan">
-                                        <img class="recentimg" src="img/banner3.jpg" alt="">
-                                        <img class="recentimg1" src="img/banner3.jpg" alt="">
-                                        <img class="recentimg2" src="img/banner3.jpg" alt="">
-                                        <div class="recent-title">
-                                            <p >12 mints</p>
+                                    </li>
+                                </div>
+                                <div class="musiclist-box">
+                                    <li class="songItem">
+                                        <img src="" alt="" class="musiclist-imgage">
+                                        <div class="musiclist-cus-ast">
+                                            <h5>
+                                                <p class="subtitle"></p>
+                                            </h5>
+                                            <div class="recent-option">
+                                                <p class="Recentprice">0.9 SOL</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </div>
-                            <div class="musiclist-box">
-                                <li class="songItem">
-                                    <img src="" alt="" class="musiclist-imgage">
-                                    <div class="musiclist-cus-ast">
-                                        <h5>
-                                            <p class="subtitle"></p>
-                                        </h5>
-                                        <div class="recent-option">
-                                            <p class="Recentprice">0.9 SOL</p>
+                                        <div class="play_pause_hover">
+                                            <i class='bx playListPlay bx-play-circle ' id="24"></i>
                                         </div>
-                                    </div>
-                                    <div class="play_pause_hover">
-                                        <i class='bx playListPlay bx-play-circle ' id="25"></i>
-                                    </div>
-                                    <div class="fress-fan">
-                                        <img class="recentimg" src="img/banner3.jpg" alt="">
-                                        <img class="recentimg1" src="img/banner3.jpg" alt="">
-                                        <img class="recentimg2" src="img/banner3.jpg" alt="">
-                                        <div class="recent-title">
-                                            <p >12 mints</p>
+                                        <div class="fress-fan">
+                                            <img class="recentimg" src="img/banner3.jpg" alt="">
+                                            <img class="recentimg1" src="img/banner3.jpg" alt="">
+                                            <img class="recentimg2" src="img/banner3.jpg" alt="">
+                                            <div class="recent-title">
+                                                <p>12 mints</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </div>
-                            <div class="musiclist-box">
-                                <li class="songItem">
-                                    <img src="" alt="" class="musiclist-imgage">
-                                    <div class="musiclist-cus-ast">
-                                        <h5>
-                                            <p class="subtitle"></p>
-                                        </h5>
-                                        <div class="recent-option">
-                                            <p class="Recentprice">0.9 SOL</p>
+                                    </li>
+                                </div>
+                                <div class="musiclist-box">
+                                    <li class="songItem">
+                                        <img src="" alt="" class="musiclist-imgage">
+                                        <div class="musiclist-cus-ast">
+                                            <h5>
+                                                <p class="subtitle"></p>
+                                            </h5>
+                                            <div class="recent-option">
+                                                <p class="Recentprice">0.9 SOL</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="play_pause_hover">
-                                        <i class='bx playListPlay bx-play-circle ' id="26"></i>
-                                    </div>
-                                    <div class="fress-fan">
-                                        <img class="recentimg" src="img/banner3.jpg" alt="">
-                                        <img class="recentimg1" src="img/banner3.jpg" alt="">
-                                        <img class="recentimg2" src="img/banner3.jpg" alt="">
-                                        <div class="recent-title">
-                                            <p >12 mints</p>
+                                        <div class="play_pause_hover">
+                                            <i class='bx playListPlay bx-play-circle ' id="25"></i>
                                         </div>
-                                    </div>
-                                </li>
-                            </div>
+                                        <div class="fress-fan">
+                                            <img class="recentimg" src="img/banner3.jpg" alt="">
+                                            <img class="recentimg1" src="img/banner3.jpg" alt="">
+                                            <img class="recentimg2" src="img/banner3.jpg" alt="">
+                                            <div class="recent-title">
+                                                <p>12 mints</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="musiclist-box">
+                                    <li class="songItem">
+                                        <img src="" alt="" class="musiclist-imgage">
+                                        <div class="musiclist-cus-ast">
+                                            <h5>
+                                                <p class="subtitle"></p>
+                                            </h5>
+                                            <div class="recent-option">
+                                                <p class="Recentprice">0.9 SOL</p>
+                                            </div>
+                                        </div>
+                                        <div class="play_pause_hover">
+                                            <i class='bx playListPlay bx-play-circle ' id="26"></i>
+                                        </div>
+                                        <div class="fress-fan">
+                                            <img class="recentimg" src="img/banner3.jpg" alt="">
+                                            <img class="recentimg1" src="img/banner3.jpg" alt="">
+                                            <img class="recentimg2" src="img/banner3.jpg" alt="">
+                                            <div class="recent-title">
+                                                <p>12 mints</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
                             </div>
                         </nav>
-                    </div>    
+                    </div>
                 </aside>
             </div>
         </section>
-        
+
 
     </tbody>
 
@@ -942,10 +949,10 @@
                 <div class="footer-links">
                     <p>Join the community</p>
                     <div class="links">
-                        <a href=""><i class='bx bxl-github'></i></a>
-                        <a href=""><i class='bx bxl-discord-alt'></i></a>
-                        <a href=""><i class='bx bxl-twitter'></i></a>
-                        <a href=""><i class='bx bxl-facebook'></i></a>
+                        <a href="https://github.com/siphuc123/NFT_Music_Platforms"><i class='bx bxl-github'></i></a>
+                        <a href="https://discord.gg/n3JCcvXK"><i class='bx bxl-discord-alt'></i></a>
+                        <a href="https://twitter.com/BeesLazy"><i class='bx bxl-twitter'></i></a>
+                        <a href=""><i class='bx bxl-telegram'></i></a>
                     </div>
                 </div>
                 <div class="footer-social">
@@ -975,10 +982,11 @@
         </div>
     </footer>
 
-
+    <script src="js/connectWallet.js"></script>
     <script src="js/script.js"></script>
 
-    <script src="js/connectWallet.js"></script>
+
+    </script>
 </body>
 
 </html>
