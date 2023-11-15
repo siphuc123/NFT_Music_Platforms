@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LazyBees - Music NFTs</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+    <link rel="icon" type="image/x-icon" href="img/logo-removebg-preview.png">
     <script src="https://kit.fontawesome.com/11f75f157a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/usercollection.css">
     
@@ -15,22 +15,29 @@
         <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
         <nav class="navigation">
             <a href="#">Explore</a>
-            <a href="#">Feed</a>
-            <a href="#">Charts</a>
+            <a href="feed.html">Feed</a>
+            <a href="usercollection.html">Charts</a>
         </nav>
 
         <div class="search-box">
             <form action="">
-                <input  name="search" id="srch" placeholder="Search">
+                <input name="search" id="srch" placeholder="Search for music...">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
 
-        <button class=" btnLogin-popup"> <span>Connect Wallet</span></button>
+        <button class="btnLogin-popup" id="show-element"> <span>Connect Wallet</span></button>
+        <div id="otherButton" class="hide">
+            <div class="After-logging-in">
+                <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
+                <p>13 SOL</p>
+            </div>
+        </div>
 
-        <a href="#" class="shopping"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" class="shopping"><i class='bx bx-cart'></i></a>
 
     </header>
+
     <section style="background-color: #191717 !important;">
         <div class="container-user"> 
             <div class="background-image">

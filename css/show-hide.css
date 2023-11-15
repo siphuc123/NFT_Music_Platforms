@@ -1,0 +1,15 @@
+/* Transition */
+div {
+    transition: all 0.5s cubic-bezier(.83, -0.43, .21, 1.42);
+}
+
+/* Text states (for js) */
+.hide {
+    display: none;
+    top: calc(50% + 8em);
+}
+
+.show {
+    display: block;
+    top: calc(50% + 6em);
+}

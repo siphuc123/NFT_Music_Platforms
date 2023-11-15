@@ -3,8 +3,13 @@
 const wrapper = document.querySelector('.wrapper');
 const btnPopup = document.querySelector('.btnLogin-popup');
 const iconClose =document.querySelector('.icon-close');
+const otherButton = document.querySelector('#otherButton');
 
+btnPopup.addEventListener('click' , () => {btnPopup.classList.add('hide')});
+btnPopup.addEventListener('click' , () => {otherButton.classList.add('show')});
 
+otherButton.addEventListener('click' , () => {otherButton.classList.add('show')});
+otherButton.addEventListener('click' , () => {btnPopup.classList.add('hide')});
 
 btnPopup.addEventListener('click', () => {wrapper.classList.add('active-popup');
 });
