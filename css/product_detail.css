@@ -8,11 +8,11 @@
 }
 
 :root {
-    --main-color: #24252D ;
+    --main-color: #24252D;
     --Section1-color: #2A2D3A;
     --Section2-color: #7D7C7C;
     --Section3-color: #191717;
-    --button-color:#F31559;
+    --button-color: #F31559;
     --section4--color: #ccc8aa;
 }
 
@@ -249,7 +249,7 @@ header .search-box {
 
 .bx-cart {
     color: whitesmoke;
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
 }
 
 header .shopping {
@@ -280,7 +280,8 @@ header .shopping {
     padding-left: -10px;
     padding-right: 30px;
     display: flex;
-    flex-direction: column;/* background-color: blue; */
+    flex-direction: column;
+    /* background-color: blue; */
     align-items: flex-end;
 }
 
@@ -312,7 +313,7 @@ header .shopping {
     padding: 0px 5%;
 }
 
-.inter-img-time i{
+.inter-img-time i {
     font-size: 25px;
 }
 
@@ -322,7 +323,7 @@ header .shopping {
 }
 
 .inter-img-time p span {
-    padding-right: 4px ;
+    padding-right: 4px;
 }
 
 .inter-img {
@@ -336,12 +337,12 @@ header .shopping {
     padding: 0px 2%;
 }
 
-.inter-img  .bar3 {
+.inter-img .bar3 {
     width: 250px;
 
 }
 
-.inter-img  .bar3 .dot4 {
+.inter-img .bar3 .dot4 {
     position: absolute;
     width: 15px;
     height: 15px;
@@ -357,7 +358,7 @@ header .shopping {
     margin-left: 30px;
 }
 
-.icon-title-bar i{
+.icon-title-bar i {
     font-size: 1.2rem;
     padding-left: 10px;
 }
@@ -389,7 +390,7 @@ header .shopping {
 }
 
 .product-title svg {
-    margin-right: -7px ;
+    margin-right: -7px;
 }
 
 .product-title span {
@@ -494,7 +495,7 @@ header .shopping {
     margin-left: -5px;
 }
 
-.product-description .product-description-title1{
+.product-description .product-description-title1 {
     margin-top: -100px;
     height: auto;
     font-size: 18px;
@@ -929,9 +930,3 @@ footer .container {
     width: 250px;
     justify-content: space-around;
 }
-
-
-
-
-
-

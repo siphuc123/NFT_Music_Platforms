@@ -146,21 +146,19 @@ header .shopping {
 }
 
 /*FORM User*/
-.container-user{
+.container-user {
     width: 100%;
     height: 450px;
 
-    
+
 }
 
-.container-user .background-image{
+.container-user .background-image {
     width: 100%;
     height: 300px;
     position: relative;
 }
-.background-image{
-    
-}
+
 .background-image img {
     width: 100%;
     height: 100%;
@@ -172,7 +170,8 @@ header .shopping {
     background-color: D9D9D9 !important;
     border-bottom: 2px solid #acaaaa;
 }
-.container-user .user-image{
+
+.container-user .user-image {
     width: 80%;
     height: 100px;
     position: absolute;
@@ -180,8 +179,9 @@ header .shopping {
     left: 45%;
     transform: translate(-50%, -50%);
 
-    
+
 }
+
 .user-image img {
     border: 2px solid #7D7C7C;
     max-width: 17%;
@@ -190,14 +190,16 @@ header .shopping {
     box-shadow: 0px 0px 8px 4px #7D7C7C;
 }
 
-main{
+main {
     background-color: #191717 !important;
 }
+
 .container-main {
     width: 80%;
     justify-items: center;
     align-items: center;
 }
+
 .container-main #note {
     display: flex;
     position: relative;
@@ -214,23 +216,26 @@ main{
     margin: 0 auto;
     margin-top: 20px;
 }
+
 .nav-form {
     width: 30.8%;
     border: 2px solid black;
-    
+
 }
+
 .container-nav .nav-form {
     list-style: none;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
 }
+
 .container-nav li {
     display: inline-block;
     border-left: 1px solid rgb(193, 193, 156);
 
 }
-  
+
 .container-nav li a {
     width: 100px;
     display: block;
@@ -239,7 +244,7 @@ main{
     color: #333;
 
 }
-  
+
 .container-nav li a:hover {
     background-color: #ddd;
 }
@@ -249,60 +254,71 @@ article {
     min-height: 600px;
     float: left;
 }
+
 aside {
     margin-top: 10px;
     width: 82%;
     height: 600px;
     float: right;
     background-color: chartreuse;
-    overflow:auto;
+    overflow: auto;
 }
+
 .boxcenter {
     width: 100%;
-    
+
 }
+
 .box {
     width: 280px;
     height: 400px;
-    background-color:  #ddd;
+    background-color: #ddd;
     float: left;
     margin: 10px;
     border-radius: 5px;
 }
-.box .box-img{
+
+.box .box-img {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 280px;
     min-height: 280px;
 }
+
 .box img {
     width: 280px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
+
 .box-name {
     margin: 10px;
     height: 30px;
 }
-.box-name .box-name-product{
+
+.box-name .box-name-product {
     float: left;
     width: 60%;
     color: #191717;
-    
+
 }
-.box-name .box-name-mv{
+
+.box-name .box-name-mv {
     float: right;
     width: 30%;
     color: #191717;
 }
+
 .box-name-mv {
     border: 1px solid black;
     border-radius: 7px;
 }
+
 .box-price {
     margin: 10px;
 }
+
 .box-saleprice {
     margin: 10px;
     color: #7D7C7C;
@@ -318,35 +334,35 @@ footer {
     bottom: -1000px;
     width: 100%;
     height: 250px;
-  }
-  
- 
-  .container {
+}
+
+
+.container {
     /* margin: 0 auto; */
     padding: 20px;
-  }
-  
-  
-  .footer-content {
+}
+
+
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .footer-logo img {
+}
+
+.footer-logo img {
     position: absolute;
     top: 30px;
     width: 35px;
     height: 35px;
-  }
+}
 
-  .footer-logo h3 {
+.footer-logo h3 {
     position: absolute;
     left: 70px;
     top: 35px;
-  }
+}
 
-  .footer-logo p {
+.footer-logo p {
     position: absolute;
     left: 25px;
     top: 80px;
@@ -354,43 +370,43 @@ footer {
     font-size: 14px;
     width: 150px;
     line-height: 20px;
-  }
+}
 
-  .footer-links {
-   position: absolute;
-   left: 600px;
-   top: 25px;
-  }
-  
- .footer-links p {
+.footer-links {
+    position: absolute;
+    left: 600px;
+    top: 25px;
+}
+
+.footer-links p {
     font-size: 2rem;
-    
- }
-  
- .footer-links .links  {
+
+}
+
+.footer-links .links {
     position: absolute;
     top: 80px;
- }
+}
 
- .footer-links .links a {
+.footer-links .links a {
     text-decoration: none;
     align-items: center;
     width: 50px;
     height: 50px;
     background: #000;
- }
+}
 
- .footer-links .links a i {
+.footer-links .links a i {
     font-size: 2.4rem;
     color: #F1EFEF;
     display: flex;
 
-    
+
     align-items: center;
-   
- }
-  
- .bxl-github {
+
+}
+
+.bxl-github {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,9 +416,9 @@ footer {
     background: #000;
     border-radius: 6px;
     border: 1px solid var(--main-color);
- }
+}
 
- .bxl-discord-alt {
+.bxl-discord-alt {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -415,9 +431,9 @@ footer {
     background: #000;
     border-radius: 6px;
     border: 1px solid var(--main-color);
- }
+}
 
- .bxl-twitter {
+.bxl-twitter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -430,9 +446,9 @@ footer {
     background: #000;
     border-radius: 6px;
     border: 1px solid var(--main-color);
- }
+}
 
- .bxl-facebook {
+.bxl-facebook {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -445,22 +461,22 @@ footer {
     background: #000;
     border-radius: 6px;
     border: 1px solid var(--main-color);
- }
+}
 
- .footer-social {
+.footer-social {
     position: absolute;
     right: 200px;
- }
+}
 
- .footer-social h3 {
+.footer-social h3 {
     position: absolute;
     top: 15px;
     width: 150px;
     font-weight: 200px;
     font-size: 1.3rem;
- }
+}
 
- .footer-social p {
+.footer-social p {
     position: absolute;
     top: 50px;
     right: -200px;
@@ -469,25 +485,25 @@ footer {
     text-indent: 20px;
     font-weight: 100px;
     font-size: 0.9rem;
- }
+}
 
- .footer-social .login-email {
+.footer-social .login-email {
     display: flex;
     position: absolute;
     top: 120px;
     right: -100px;
- }
+}
 
- .footer-social .login-email input {
+.footer-social .login-email input {
     color: whitesmoke;
     background: transparent;
     border: 1px solid gray;
     width: 200px;
     height: 40px;
     border-radius: 10px;
- }
+}
 
- .footer-social .login-email button {
+.footer-social .login-email button {
     width: 80px;
     height: 40px;
     color: #FCF8F8;
@@ -496,50 +512,50 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    background-color: #1678A2 ;
+    background-color: #1678A2;
     border-radius: 10px;
     position: absolute;
     right: -90px;
- }
+}
 
- .footer-bottom {
+.footer-bottom {
     display: flex;
     position: absolute;
     top: 120px;
     width: 90%;
- }
+}
 
- .footer-bottom img {
+.footer-bottom img {
     position: absolute;
     width: 20px;
     height: 20px;
     top: 100px;
- }
+}
 
- .footer-bottom h4 {
+.footer-bottom h4 {
     position: absolute;
     left: 30px;
     font-size: 15px;
     top: 101px;
- }
+}
 
- .footer-bottom .private {
+.footer-bottom .private {
     display: flex;
     position: absolute;
     right: -120px;
     font-size: 15px;
     top: 101px;
- }
+}
 
- .footer-bottom .private p {
+.footer-bottom .private p {
     padding-right: 15px;
- }
+}
 
- .line {
+.line {
     content: '';
     position: absolute;
     width: 1430px;
     border-top: 1px solid var(--main-color);
     top: 95px;
-    
- }
+
+}
