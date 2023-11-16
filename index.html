@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LazyBees - Music NFTs</title>
     <link rel="icon" type="image/x-icon" href="img/logo-removebg-preview.png">
+    <!-- Plugin -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="js/connectWallet.js">
     <script src="https://kit.fontawesome.com/11f75f157a.js" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <link rel="stylesheet" href="js/connectWallet.js">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/show-hide.css">
@@ -22,7 +24,7 @@
         <nav class="navigation">
             <a href="explore.html">Explore</a>
             <a href="feed.html">Feed</a>
-            <a href="usercollection.html">Charts</a>
+            <a href="collectionstats.html">Charts</a>
         </nav>
 
         <div class="search-box">
@@ -32,19 +34,72 @@
             </form>
         </div>
 
-        <button class="btnLogin-popup" id="show-element"> <span>Connect Wallet</span></button>
-        <div id="otherButton" class="hide">
-            <div class="After-logging-in">
-                <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
-                <p>13 SOL</p>
+        <div class="d-flex">
+            <button class="btnLogin-popup" style="position: relative;">
+                <p>
+                    <i class='bx bx-wallet'></i>
+                </p>
+
+                <span>Connect Wallet</span>
+            </button>
+            <div id="otherButton" class="hide">
+                <div class="After-logging-in">
+                    <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
+                    <p>13 SOL</p>
+                </div>
+            </div>
+
+            <div id="cd-cart-trigger" class="shopping"><a class="cd-img-replace" href="#0">
+                    <i class='bx bx-cart'></i></a>
             </div>
         </div>
-
-        <a href="#" class="shopping"><i class='bx bx-cart'></i></a>
-
     </header>
 
+    <div id="cd-shadow-layer"></div>
 
+    <div id="cd-cart">
+        <div class="cart-header">
+            <p>Your Cart <i class='bx bx-info-circle'></i></p>
+            <span>Clear all (3 items)</span>
+        </div>
+
+        <ul class="cd-cart-items">
+            <li>
+                <span class="cd-qty">At My Worst (Standard Edition)</span> #2002
+                <div class="cd-price">Pink Sweats</div>
+                <div class="cd-des">This is one of a ...</div>
+                <div class="cd-price cd-item-price cd-img-replace">0.005 SOL</div>
+                <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+            </li>
+
+            <li>
+                <span class="cd-qty">At My Worst (Standard Edition)</span> #2003
+                <div class="cd-price">Pink Sweats</div>
+                <div class="cd-des">This is one of a ...</div>
+                <div class="cd-price cd-item-price cd-img-replace">0.005 SOL</div>
+                <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+            </li>
+
+            <li>
+                <span class="cd-qty">At My Worst <b class="special-edition">(Limited Edition)</b></span> #1
+                <div class="cd-price">Pink Sweats</div>
+                <div class="cd-des">This is one of a ...</div>
+                <div class="cd-price cd-item-price cd-img-replace">0.0221 SOL</div>
+                <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+            </li>
+        </ul> <!-- cd-cart-items -->
+
+        <div class="cd-cart-total d-flex" style="justify-content: space-between;">
+            <p>Total:</p>
+            <div class="d-flex justify-content-center" style="flex-direction: column;">
+                <span>0.00321 SOL</span>
+                <span class="cd-des">~= 0.20 USD</span>
+            </div>
+        </div> <!-- cd-cart-total -->
+
+        <a href="#0" class="checkout-btn">Purchase</a>
+
+    </div> <!-- cd-cart -->
 
     <div class="wrapper">
         <span class="icon-close">
@@ -961,7 +1016,7 @@
                         the loop with our newest music releases and
                         newest things about LB.</p>
                     <div class="login-email">
-                        <input type="text" placeholder="Your email address" name="email address">
+                        <input type="text" placeholder="  Your email address" name="email address">
                         <button style="cursor: pointer;">Sign up</button>
                     </div>
 
@@ -984,9 +1039,8 @@
 
     <script src="js/connectWallet.js"></script>
     <script src="js/script.js"></script>
-
-
-    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/main.js"></script> <!-- Gem jQuery -->
 </body>
 
 </html>

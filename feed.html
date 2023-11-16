@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed // LazyBees Socia</title>
+  <title>BeeSocial // LazyBees</title>
   <!-- Icon - Logo -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="icon" type="image/x-icon" href="img/logo-removebg-preview.png">
@@ -13,6 +13,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/feed.css">
   <link rel="stylesheet" href="css/show-hide.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -23,25 +24,35 @@
     <nav class="navigation">
       <a href="explore.html">Explore</a>
       <a href="feed.html">Feed</a>
-      <a href="usercollection.html">Charts</a>
+      <a href="collectionstats.html">Charts</a>
     </nav>
 
     <div class="search-box">
       <form action="">
-        <input name="search" id="srch" placeholder="Search">
+        <input name="search" id="srch" placeholder="Search for music...">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
 
-    <div id="otherButton">
-      <div class="After-logging-in">
-        <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
-        <p>13 SOL</p>
+    <div class="d-flex">
+      <!-- <button class="btnLogin-popup" style="position: relative;">
+            <p>
+                <i class='bx bx-wallet'></i>
+            </p>
+
+            <span>Connect Wallet</span>
+        </button> -->
+      <div id="otherButton">
+        <div class="After-logging-in">
+          <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
+          <p>13 SOL</p>
+        </div>
+      </div>
+
+      <div id="cd-cart-trigger" class="shopping"><a class="cd-img-replace" href="#0">
+          <i class='bx bx-cart'></i></a>
       </div>
     </div>
-
-    <a href="#" class="shopping"><i class='bx bx-cart'></i></a>
-
   </header>
 
   <tbody>
@@ -361,10 +372,9 @@
   </tbody>
 
   <script src="js/script.js"></script>
-
   <script src="js/connectWallet.js"></script>
-
-  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/main.js"></script> <!-- Gem jQuery -->
 </body>
 
 </html>

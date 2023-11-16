@@ -11,39 +11,116 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/product_detail.css">
     <link rel="stylesheet" href="css/show-hide.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-
         <a href="index.html">
             <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
         </a>
         <nav class="navigation">
             <a href="explore.html">Explore</a>
             <a href="feed.html">Feed</a>
-            <a href="usercollection.html">Charts</a>
+            <a href="collectionstats.html">Charts</a>
         </nav>
 
         <div class="search-box">
             <form action="">
-                <input name="search" id="srch" placeholder="Search">
+                <input name="search" id="srch" placeholder="Search for music...">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
 
-        <div id="otherButton">
-            <div class="After-logging-in">
-                <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
-                <p>13 SOL</p>
+        <div class="d-flex">
+            <button class="btnLogin-popup" style="position: relative;">
+                <p>
+                    <i class='bx bx-wallet'></i>
+                </p>
+
+                <span>Connect Wallet</span>
+            </button>
+            <div id="otherButton" class="hide">
+                <div class="After-logging-in">
+                    <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
+                    <p>13 SOL</p>
+                </div>
+            </div>
+
+            <div id="cd-cart-trigger" class="shopping"><a class="cd-img-replace" href="#0">
+                    <i class='bx bx-cart'></i></a>
             </div>
         </div>
-
-        <a href="#" class="shopping"><i class="bx bx-cart"></i></a>
-
-
     </header>
 
+    <div id="cd-shadow-layer"></div>
+
+    <div id="cd-cart">
+        <div class="cart-header">
+            <p>Your Cart <i class='bx bx-info-circle'></i></p>
+            <span>Clear all (3 items)</span>
+        </div>
+
+        <ul class="cd-cart-items">
+            <li>
+                <span class="cd-qty">At My Worst (Standard Edition)</span> #2002
+                <div class="cd-price">Pink Sweats</div>
+                <div class="cd-des">This is one of a ...</div>
+                <div class="cd-price cd-item-price cd-img-replace">0.005 SOL</div>
+                <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+            </li>
+
+            <li>
+                <span class="cd-qty">At My Worst (Standard Edition)</span> #2003
+                <div class="cd-price">Pink Sweats</div>
+                <div class="cd-des">This is one of a ...</div>
+                <div class="cd-price cd-item-price cd-img-replace">0.005 SOL</div>
+                <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+            </li>
+
+            <li>
+                <span class="cd-qty">At My Worst <b class="special-edition">(Limited Edition)</b></span> #1
+                <div class="cd-price">Pink Sweats</div>
+                <div class="cd-des">This is one of a ...</div>
+                <div class="cd-price cd-item-price cd-img-replace">0.0221 SOL</div>
+                <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+            </li>
+        </ul> <!-- cd-cart-items -->
+
+        <div class="cd-cart-total d-flex" style="justify-content: space-between;">
+            <p>Total:</p>
+            <div class="d-flex justify-content-center" style="flex-direction: column;">
+                <span>0.00321 SOL</span>
+                <span class="cd-des">~= 0.20 USD</span>
+            </div>
+        </div> <!-- cd-cart-total -->
+
+        <a href="#0" class="checkout-btn">Purchase</a>
+
+    </div> <!-- cd-cart -->
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <i class="fa-solid fa-xmark"></i>
+        </span>
+        <div class="form-box login">
+            <h2 class="shadow">CONNECT YOUR WALLET</h2>
+            <form action="#">
+                <a href="" onclick="connectWallet()"><img src="img/Phantom-Icon_App_128x128.png" alt=""> <span>Phantom
+                        Wallet</span></a>
+                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#walletconnect" alt="">
+                    <span>WalletConnect</span></a>
+                <a href=""><img src="img/Glow_Icon.png" alt=""> <span>Glow</span></a>
+                <a href=""><img src="img/soflare_Icon.png" alt=""> <span>Solflare</span></a>
+                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#metamask" alt="">
+                    <span>MetaMask</span></a>
+                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#coinbase" alt="">
+                    <span>Coinbase Wallet</span></a>
+
+                <button class="Show">Show More</button>
+            </form>
+        </div>
+    </div>
     <tbody>
         <section id="body-detail-item1" class="product-detail">
             <div class="product-detail-box">
@@ -150,8 +227,10 @@
                                     <p class="price-hide">$1,920,30</p>
                                 </div>
                                 <div class="product-information-buy">
-                                    <button class="buy">Buy now<i
-                                            class="fa-solid fa-cart-shopping buy-cart"></i></button>
+                                    <button class="buy" style="margin-right: 10px;">
+                                        <span style="margin-right: 15px;">Buy now</span>
+                                        <i class="fa-solid fa-cart-shopping buy-cart"></i>
+                                    </button>
                                     <button class="offer">Make offer</button>
                                 </div>
                             </div>
@@ -248,8 +327,8 @@
                         the loop with our newest music releases and
                         newest things about LB.</p>
                     <div class="login-email">
-                        <input type="text" placeholder="Your email address" name="email address">
-                        <button>Sign up</button>
+                        <input type="text" placeholder="  Your email address" name="email address">
+                        <button style="cursor: pointer;">Sign up</button>
                     </div>
 
                 </div>
@@ -269,9 +348,11 @@
         </div>
     </footer>
 
-
-    <script src="js/script.js"></script>
     <script src="js/connectWallet.js"></script>
+    <script src="js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/main.js"></script> <!-- Gem jQuery -->
+    <script src="js/Profile.js"></script>
 </body>
 
 </html>
