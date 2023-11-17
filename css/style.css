@@ -149,6 +149,11 @@ header {
     display: flex;
 }
 
+.d-flex > img {
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
 .justify-content-center {
     justify-content: center;
 }
@@ -1588,7 +1593,7 @@ header {
 
     #main-nav,
     #cd-cart {
-        width: 30%;
+        width: 36%;
         /* header height has changed */
         padding-top: 80px;
     }
