@@ -19,41 +19,87 @@
 <body>
   <header>
     <a href="index.html">
-      <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
+        <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
     </a>
     <nav class="navigation">
-      <a href="explore.html">Explore</a>
-      <a href="feed.html">Feed</a>
-      <a href="collectionstats.html">Charts</a>
+        <a href="explore.html">Explore</a>
+        <a href="feed.html">Feed</a>
+        <a href="collectionstats.html">Charts</a>
     </nav>
 
     <div class="search-box">
-      <form action="">
-        <input name="search" id="srch" placeholder="Search for music...">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+        <form action="">
+            <input name="search" id="srch" placeholder="Search for music...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
 
     <div class="d-flex">
-      <!-- <button class="btnLogin-popup" style="position: relative;">
+        <button class="btnLogin-popup hide" style="position: relative;">
             <p>
                 <i class='bx bx-wallet'></i>
             </p>
 
             <span>Connect Wallet</span>
-        </button> -->
-      <div id="otherButton">
-        <div class="After-logging-in">
-          <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
-          <p>13 SOL</p>
+        </button>
+        <div id="otherButton">
+            <div class="After-logging-in">
+                <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
+                <p>13 SOL</p>
+            </div>
         </div>
-      </div>
 
-      <div id="cd-cart-trigger" class="shopping"><a class="cd-img-replace" href="#0">
-          <i class='bx bx-cart'></i></a>
-      </div>
+        <div id="cd-cart-trigger" class="shopping"><a class="cd-img-replace" href="#0">
+                <i class='bx bx-cart'></i></a>
+        </div>
     </div>
-  </header>
+</header>
+
+<div id="cd-shadow-layer"></div>
+
+<div id="cd-cart">
+    <div class="cart-header">
+        <p>Your Cart <i class='bx bx-info-circle'></i></p>
+        <span>Clear all (3 items)</span>
+    </div>
+
+    <ul class="cd-cart-items">
+        <li>
+            <span class="cd-qty">At My Worst (Standard Edition)</span> #2002
+            <div class="cd-price">Pink Sweats</div>
+            <div class="cd-des">This is one of a ...</div>
+            <div class="cd-price cd-item-price cd-img-replace">0.005 SOL</div>
+            <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+        </li>
+
+        <li>
+            <span class="cd-qty">At My Worst (Standard Edition)</span> #2003
+            <div class="cd-price">Pink Sweats</div>
+            <div class="cd-des">This is one of a ...</div>
+            <div class="cd-price cd-item-price cd-img-replace">0.005 SOL</div>
+            <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+        </li>
+
+        <li>
+            <span class="cd-qty">At My Worst <b class="special-edition">(Limited Edition)</b></span> #1
+            <div class="cd-price">Pink Sweats</div>
+            <div class="cd-des">This is one of a ...</div>
+            <div class="cd-price cd-item-price cd-img-replace">0.0221 SOL</div>
+            <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
+        </li>
+    </ul> <!-- cd-cart-items -->
+
+    <div class="cd-cart-total d-flex" style="justify-content: space-between;">
+        <p>Total:</p>
+        <div class="d-flex justify-content-center" style="flex-direction: column;">
+            <span>0.00321 SOL</span>
+            <span class="cd-des">~= 0.20 USD</span>
+        </div>
+    </div> <!-- cd-cart-total -->
+
+    <a href="#0" class="checkout-btn">Purchase</a>
+
+</div> <!-- cd-cart -->
 
   <tbody>
     <section>
@@ -99,7 +145,7 @@
                 <h2>Pink Sweats</h2>
                 <h3>At My Worst</h3>
                 <h4>2 minted</h4>
-                <div class="d-flex">
+                <div class="d-flex  margin-t25">
                   <audio controls>
                     <source src="audio/1.mp3">
                   </audio>
@@ -133,7 +179,7 @@
                 <h2>Pink Sweats</h2>
                 <h3>At My Worst</h3>
                 <h4>2 minted</h4>
-                <div class="d-flex">
+                <div class="d-flex  margin-t25">
                   <audio controls>
                     <source src="audio/1.mp3">
                   </audio>
@@ -167,7 +213,7 @@
                 <h2>Pink Sweats</h2>
                 <h3>At My Worst</h3>
                 <h4>2 minted</h4>
-                <div class="d-flex">
+                <div class="d-flex  margin-t25">
                   <audio controls>
                     <source src="audio/1.mp3">
                   </audio>
@@ -201,7 +247,7 @@
                 <h2>Pink Sweats</h2>
                 <h3>At My Worst</h3>
                 <h4>2 minted</h4>
-                <div class="d-flex">
+                <div class="d-flex margin-t25">
                   <audio controls>
                     <source src="audio/1.mp3">
                   </audio>
@@ -374,7 +420,7 @@
   <script src="js/script.js"></script>
   <script src="js/connectWallet.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="js/main.js"></script> <!-- Gem jQuery -->
+    <script src="js/main.js"></script> <!-- Gem jQuery -->
 </body>
 
 </html>
