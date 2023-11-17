@@ -71,16 +71,21 @@ const GetDetails = () => {
             src={imgs}
             alt=""
             style={{
-              width: "200px",
-              height: "200px",
+              width: "300px",
+              height: "300px",
               borderRadius: "15px",
-              border: "2px solid white",
+              objectFit: 'cover'
             }}
           />
         </div>
         <h2 className="pb-2 text-center text-light">{name}</h2>
         <div className="table-container py-4">
-          <table className="table table-striped table-dark">
+          <table className="table table-bordered table-light"
+            style={{
+              boxShadow:'0px 0px 10px 2px white',
+              
+            }}
+          >
             <tbody>
               <tr>
                 <td className="p-3">Description</td>
