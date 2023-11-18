@@ -75,7 +75,15 @@
 }
 
 .shopping svg {
-  font-size: 1.5rem;
+  margin-left: 20px;
+  font-size: 2.2rem;
+  color: #1B1A21;
+  transition: all 0.2s ease-in;
+}
+
+.shopping svg:hover {
+  transform: scale(1.1);
+  color: var(--section4--color);
 }
 
 .navbar-sign button,

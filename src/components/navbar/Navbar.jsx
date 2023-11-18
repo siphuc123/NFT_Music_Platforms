@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./navbar.css";
-import { RiMenu3Line, RiCloseLine, RiShoppingCart2Line, RiSearchEyeLine } from "react-icons/ri";
+import {
+  RiWallet2Line,
+  RiShoppingCart2Line,
+  RiSearchEyeLine,
+} from "react-icons/ri";
 import logo from "../../assets/logo-removebg.png";
+import item from "../../assets/1.jpg";
 import { Link } from "react-router-dom";
 
 const Menu = () => (
@@ -13,19 +18,155 @@ const Menu = () => (
 );
 
 const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const [user, setUser] = useState(false);
+  // const [toggleMenu, setToggleMenu] = useState(false);
+  // const [user, setUser] = useState(false);
 
-  const handleLogout = () => {
-    setUser(false);
+  // const handleLogout = () => {
+  //   setUser(false);
+  // };
+
+  // const handleLogin = () => {
+  //   setUser(true);
+  // };
+
+  const positionR = {
+    position: "relative",
   };
-
-  const handleLogin = () => {
-    setUser(true);
+  const JTF_B = {
+    justifycontent: "space-between",
   };
-
+  const FDC = {
+    flexdirection: "column",
+  };
   return (
     <>
+      <header>
+        <Link to="/home">
+          <h2 className="logo">
+            <img src={logo} alt="" />
+          </h2>
+        </Link>
+        <nav className="navigation">
+          <Menu />
+        </nav>
+
+        <div className="search-box">
+          <form action="">
+            <input name="search" id="srch" placeholder="Search for music..." />
+            <button type="submit">
+              <RiSearchEyeLine></RiSearchEyeLine>
+            </button>
+          </form>
+        </div>
+
+        <div className="d-flex">
+          <button className="btnLogin-popup" style={positionR}>
+            <p>
+              <RiWallet2Line viewBox="-1 0 24 24"></RiWallet2Line>
+            </p>
+
+            <span>Connect Wallet</span>
+          </button>
+          <div id="otherButton" className="hide">
+            <div className="After-logging-in">
+              <Link to="Profile.html">
+                <img src="img/NFT-1.jpg" alt="" />
+                <span>Name</span>
+              </Link>
+              <p>13 SOL</p>
+            </div>
+          </div>
+
+          <div id="cd-cart-trigger" className="shopping">
+            <Link className="cd-img-replace" to="#0">
+              <RiShoppingCart2Line></RiShoppingCart2Line>
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      <div id="cd-shadow-layer"></div>
+
+      <div id="cd-cart">
+        <div className="cart-header">
+          <p>
+            Your Cart <i className="bx bx-info-circle"></i>
+          </p>
+          <span>Clear all (3 items)</span>
+        </div>
+
+        <ul className="cd-cart-items">
+          <li>
+            <div className="d-flex">
+              <img src={item} height="65px" width="auto" alt="" />
+              <div>
+                <span className="cd-qty">At My Worst (Standard Edition)</span>{" "}
+                #2002
+                <div className="cd-price">Pink Sweats</div>
+                <div className="cd-des">This is one of Link ...</div>
+              </div>
+              <div className="cd-price cd-item-price cd-img-replace">
+                0.005 SOL
+              </div>
+              <Link to="#0" className="cd-item-remove cd-img-replace">
+                <i className="bx bx-trash"></i>
+              </Link>
+            </div>
+          </li>
+
+          <li>
+            <div className="d-flex">
+              <img src={item} height="65px" width="auto" alt="" />
+              <div>
+                <span className="cd-qty">At My Worst (Standard Edition)</span>{" "}
+                #2003
+                <div className="cd-price">Pink Sweats</div>
+                <div className="cd-des">This is one of Link ...</div>
+              </div>
+              <div className="cd-price cd-item-price cd-img-replace">
+                0.005 SOL
+              </div>
+              <Link to="#0" className="cd-item-remove cd-img-replace">
+                <i className="bx bx-trash"></i>
+              </Link>
+            </div>
+          </li>
+
+          <li>
+            <div className="d-flex">
+              <img src={item} height="65px" width="auto" alt="" />
+              <div>
+                <span className="cd-qty">
+                  At My Worst{" "}
+                  <b className="special-edition">(Limited Edition)</b>
+                </span>{" "}
+                #1
+                <div className="cd-price">Pink Sweats</div>
+                <div className="cd-des">This is one of Link ...</div>
+              </div>
+              <div className="cd-price cd-item-price cd-img-replace">
+                0.0221 SOL
+              </div>
+              <Link to="#0" className="cd-item-remove cd-img-replace">
+                <i className="bx bx-trash"></i>
+              </Link>
+            </div>
+          </li>
+        </ul>
+
+        <div className="cd-cart-total d-flex" style={JTF_B}>
+          <p>Total:</p>
+          <div className="d-flex justify-content-center" style={FDC}>
+            <span>0.00321 SOL</span>
+            <span className="cd-des">~= 0.20 USD</span>
+          </div>
+        </div>
+
+        <Link to="#0" className="checkout-btn">
+          Purchase
+        </Link>
+      </div>
+
       <div className="wrapper">
         <span className="icon-close">
           <i className="fa-solid fa-xmark"></i>
@@ -33,157 +174,42 @@ const Navbar = () => {
         <div className="form-box login">
           <h2 className="shadow">CONNECT YOUR WALLET</h2>
           <form action="#">
-            <Link to="/" onClick="connectWallet()">
-              <i></i> <span>Phantom Wallet</span>
+            <Link to="" onclick="connectWallet()">
+              <img src="img/Phantom-Icon_App_128x128.png" alt="" />{" "}
+              <span>Phantom Wallet</span>
             </Link>
-            <Link to="/" onClick={handleLogin}>
-              <i></i> <span>Candy Wallet</span>
+            <Link to="">
+              <img
+                src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#walletconnect"
+                alt=""
+              />
+              <span>WalletConnect</span>
             </Link>
-            <Link to="/" onClick={handleLogin}>
-              <i></i> <span>Glow</span>
+            <Link to="">
+              <img src="img/Glow_Icon.png" alt="" /> <span>Glow</span>
             </Link>
-            <Link to="/" onClick={handleLogin}>
-              <i></i> <span>Solflare</span>
+            <Link to="">
+              <img src="img/soflare_Icon.png" alt="" /> <span>Solflare</span>
             </Link>
-            <Link to="/" onClick={handleLogin}>
-              <i></i> <span>MetaMask</span>
+            <Link to="">
+              <img
+                src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#metamask"
+                alt=""
+              />
+              <span>MetaMask</span>
             </Link>
-            <Link to="/" onClick={handleLogin}>
-              <i></i> <span>Coinbase Wallet</span>
+            <Link to="">
+              <img
+                src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#coinbase"
+                alt=""
+              />
+              <span>Coinbase Wallet</span>
             </Link>
 
             <button className="Show">Show More</button>
           </form>
         </div>
       </div>
-      <header className="navbar">
-        <div className="navbar-links">
-          {/* Logo thương hiệu */}
-          <div className="navbar-links_logo">
-            <Link to="/home">
-              <h2 className="logo">
-                <img src={logo} alt="logo" />
-              </h2>
-            </Link>
-          </div>
-          {/* Thanh menu */}
-          <nav className="navigation">
-            {" "}
-            <Menu />
-          </nav>
-          {/* Thanh tìm kiếm */}
-          <div className="navbar-links_container">
-            <div className="search-box">
-              <form action="#">
-                <input
-                  type="text"
-                  name="search"
-                  id="srch"
-                  placeholder="Search for songs here"
-                  autoFocus={true}
-                />
-                <button type="submit">
-                  <RiSearchEyeLine></RiSearchEyeLine>
-                </button>
-              </form>
-            </div>
-            {user && (
-              <Link to="/">
-                <p onClick={handleLogout}>Logout</p>
-              </Link>
-            )}
-          </div>
-        </div>
-        {/* Connect Ví - Cart */}
-        <div className="navbar-sign">
-          {user ? (
-            <>
-              <Link to="/create">
-                <button type="button" className="primary-btn">
-                  Create NFTs
-                </button>
-              </Link>
-              <Link to="/profile">
-                <button type="button" className="secondary-btn">
-                  Profile
-                </button>
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link to="/">
-                <button type="button" className=" btnLogin-popup primary-btn">
-                  {" "}
-                  <span>Connect Wallet</span>
-                </button>
-              </Link>
-              <Link to="/register">
-                <button type="button" className="secondary-btn shopping">
-                  <RiShoppingCart2Line></RiShoppingCart2Line>
-                </button>
-              </Link>
-            </>
-          )}
-        </div>
-        <div className="navbar-menu">
-          {toggleMenu ? (
-            <RiCloseLine
-              color="#fff"
-              size={27}
-              onClick={() => setToggleMenu(false)}
-            />
-          ) : (
-            <RiMenu3Line
-              color="#fff"
-              size={27}
-              onClick={() => setToggleMenu(true)}
-            />
-          )}
-          {toggleMenu && (
-            <div className="navbar-menu_container scale-up-center">
-              <div className="navbar-menu_container-links">
-                <Menu />
-              </div>
-              <div className="navbar-menu_container-links-sign">
-                {user ? (
-                  <>
-                    <Link to="/create">
-                      <button type="button" className="primary-btn">
-                        Create NFTs
-                      </button>
-                    </Link>
-                    <Link to="/profile">
-                      <button type="button" className="secondary-btn">
-                        Profile
-                      </button>
-                    </Link>
-                  </>
-                ) : (
-                  <>
-                    <Link to="/">
-                      <button
-                        type="button"
-                        className=" btnLogin-popup primary-btn"
-                      >
-                        {" "}
-                        <span>Connect Wallet</span>
-                      </button>
-                    </Link>
-                    <Link to="/register">
-                      <button type="button" className="secondary-btn">
-                        Sign Up
-                      </button>
-                    </Link>
-                    <Link to="/cart" className="shopping">
-                      <i className="bx bx-cart"></i>
-                    </Link>
-                  </>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-      </header>
     </>
   );
 };
