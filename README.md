@@ -7,3 +7,10 @@
 
 ## Link to our figma works (included mockup, mockup for mobile platform, pitchdesk,...)
 - https://www.figma.com/file/6hy5vjnorUmwtmDqgdmqK7/Layout-NFTs-Music-Web3?type=design&node-id=0%3A1&mode=design&t=VbGPVTkx4WZaEEzj-1
+
+## Remember to do (working_branch) (ReactJS):
+# Because a ".gitignore" is generated when you generate a project, and it contains the line that excludes the node_modules repository from being pushed.
+# Because the folder (node_module) can be very very heavy (several hundreds of Mb), and it would cause your pushes to be very long, and not up-to-date with your server.
+1. clone this repository
+2. run "npm -i"
+3. ng serve
