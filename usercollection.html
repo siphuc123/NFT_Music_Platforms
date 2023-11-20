@@ -1,180 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LazyBees - Music NFTs</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="img/logo-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
     <script src="https://kit.fontawesome.com/11f75f157a.js" crossorigin="anonymous"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/usercollection.css">
-    <link rel="stylesheet" href="css/show-hide.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="/css/usercollection.css">
+    
 </head>
-
 <body>
     <header>
-        <a href="index.html">
-            <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
-        </a>
+        <h2 class="logo"><img src="img/logo-removebg-preview.png" alt=""></h2>
         <nav class="navigation">
-            <a href="explore.html">Explore</a>
-            <a href="feed.html">Feed</a>
-            <a href="collectionstats.html">Charts</a>
+            <a href="#">Explore</a>
+            <a href="#">Feed</a>
+            <a href="#">Charts</a>
         </nav>
 
         <div class="search-box">
             <form action="">
-                <input name="search" id="srch" placeholder="Search for music...">
+                <input  name="search" id="srch" placeholder="Search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
 
-        <div class="d-flex">
-            <button class="btnLogin-popup" style="position: relative;">
-                <p>
-                    <i class='bx bx-wallet'></i>
-                </p>
+        <button class=" btnLogin-popup"> <span>Connect Wallet</span></button>
 
-                <span>Connect Wallet</span>
-            </button>
-            <div id="otherButton" class="hide">
-                <div class="After-logging-in">
-                    <a href="Profile.html"><img src="img/NFT-1.jpg" alt=""><span>Name</span></a>
-                    <p>13 SOL</p>
-                </div>
-            </div>
+        <a href="#" class="shopping"><i class="fa-solid fa-cart-shopping"></i></a>
 
-            <div id="cd-cart-trigger" class="shopping"><a class="cd-img-replace" href="#0">
-                    <i class='bx bx-cart'></i></a>
-            </div>
-        </div>
     </header>
-
-    <div id="cd-shadow-layer"></div>
-
-    <div id="cd-cart">
-        <div class="cart-header">
-            <p>Your Cart <i class='bx bx-info-circle'></i></p>
-            <span>Clear all (3 items)</span>
-        </div>
-
-        <ul class="cd-cart-items">
-            <li>
-                <div class="d-flex">
-                    <img src="img/1.jpg" height="65px" width="auto">
-                    <div>
-                        <span class="cd-qty">At My Worst (Standard Edition)</span> #2002
-                        <div class="cd-price">Pink Sweats</div>
-                        <div class="cd-des">This is one of a ...</div>
-                    </div>
-                    <div class="cd-price cd-item-price cd-img-replace">0.005 SOL</div>
-                    <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
-                </div>
-
-            </li>
-
-            <li>
-                <div class="d-flex">
-                    <img src="img/1.jpg" height="65px" width="auto">
-                    <div>
-                        <span class="cd-qty">At My Worst (Standard Edition)</span> #2003
-                        <div class="cd-price">Pink Sweats</div>
-                        <div class="cd-des">This is one of a ...</div>
-                    </div>
-                    <div class="cd-price cd-item-price cd-img-replace">0.005 SOL</div>
-                    <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
-                </div>
-            </li>
-
-            <li>
-                <div class="d-flex">
-                    <img src="img/1.jpg" height="65px" width="auto">
-                    <div>
-                        <span class="cd-qty">At My Worst <b class="special-edition">(Limited Edition)</b></span> #1
-                        <div class="cd-price">Pink Sweats</div>
-                        <div class="cd-des">This is one of a ...</div>
-                    </div>
-                    <div class="cd-price cd-item-price cd-img-replace">0.0221 SOL</div>
-                    <a href="#0" class="cd-item-remove cd-img-replace"><i class='bx bx-trash'></i></a>
-                </div>
-            </li>
-        </ul> <!-- cd-cart-items -->
-
-        <div class="cd-cart-total d-flex" style="justify-content: space-between;">
-            <p>Total:</p>
-            <div class="d-flex justify-content-center" style="flex-direction: column;">
-                <span>0.00321 SOL</span>
-                <span class="cd-des">~= 0.20 USD</span>
-            </div>
-        </div> <!-- cd-cart-total -->
-
-        <a href="#0" class="checkout-btn">Purchase</a>
-
-    </div> <!-- cd-cart -->
-
-    <div class="wrapper">
-        <span class="icon-close">
-            <i class="fa-solid fa-xmark"></i>
-        </span>
-        <div class="form-box login">
-            <h2 class="shadow">CONNECT YOUR WALLET</h2>
-            <form action="#">
-                <a href="" onclick="connectWallet()"><img src="img/Phantom-Icon_App_128x128.png" alt=""> <span>Phantom
-                        Wallet</span></a>
-                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#walletconnect" alt="">
-                    <span>WalletConnect</span></a>
-                <a href=""><img src="img/Glow_Icon.png" alt=""> <span>Glow</span></a>
-                <a href=""><img src="img/soflare_Icon.png" alt=""> <span>Solflare</span></a>
-                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#metamask" alt="">
-                    <span>MetaMask</span></a>
-                <a href=""><img src="https://iconic.dynamic-static-assets.com/icons/sprite.svg#coinbase" alt="">
-                    <span>Coinbase Wallet</span></a>
-
-                <button class="Show">Show More</button>
-            </form>
-        </div>
-    </div>
-
     <section style="background-color: #191717 !important;">
-        <div class="container-user">
+        <div class="container-user"> 
             <div class="background-image">
                 <img alt="">
             </div>
             <input type="file" id="choose-file" accept="image/*" style="position: relative; margin-left: 50px;">
             <div class="user-image" id="avatar-container choose-file" accept="image/*">
-                <a><img id="avatar" src="/img/user.png" alt=""></a>
+                <a><img id="avatar" src="/img/user.png" alt="" ></a>
             </div>
-
+            
         </div>
     </section>
     <main>
         <div class="container-main">
             <span><a id="note">Album Name // Fire Name</a></span>
-            <span><a id="note">Items “Number” · Created “Date” · Chain “token (SOL)</a></span>
+            <span><a id="note">Items “Number” · Created “Date” · Chain “token (SOL)</a></span> 
             <div><a id="note" src="/index.html">Introduce for the album ...
-                    See more</a></div>
+                See more</a></div> 
         </div>
 
         <div class="container-nav">
             <div class="nav-form">
-                <li><a href="">Items</a></li>
-                <li><a href="">Offers</a></li>
-                <li><a href="">Analytics</a></li>
-                <li style="border-right: 1px solid rgb(193, 193, 156);"><a href="">Activity</a></li>
+            <li><a href="">Items</a></li>
+            <li><a href="">Offers</a></li>
+            <li><a href="">Analytics</a></li>
+            <li style="border-right: 1px solid rgb(193, 193, 156);"><a href="">Activity</a></li>
             </div>
         </div>
+        <section class="fix-main">
+            <div>
+                <button class="fix-button1">---</buttonc>
+            </div>
+            <div>
+                <p>Live</p>
+                <p>0.000</p><span>results</span>
+            </div>
+            <form>
+                <button type="submit" class="search-button">Tìm</button>
+                <input type="text" class="search-input" placeholder="Tìm kiếm...">
+                
+             </form>
+            <div style="margin-left: 30px;">
+                <button class="fix-button2">Price low to high</button>
+            </div>
+            <div style="margin-left: 30px;">
+                <button class="fix-button3">0</button>
+                <button class="fix-button3">0</button>
+                <button class="fix-button3">0</button>
+                <button class="fix-button3">0</button>
+            </div>
+        </section>
         <section>
             <article>
+                <div class="article-main">
+                    <div class="categorys-main">
+                        <label for="">Categorys</label>
+                    </div>
+                    <div>
+                        <li><a class="article-name" href="">NAME ONE</a></li>
+                        <li><a class="article-name" href="">NANE TWO</a></li>
+                        <li><a class="article-name" href="">NAME THREE</a></li>
+                        <li><a class="article-name" href="">NAME FOUR</a></li>
+                        <li><a class="article-name" href="">NAME FIRE</a></li>
+                    </div>
+                </div>
+                <!-- Thanh Chạy-->
                 <div class="scrollbar" id="style-1">
                     <div class="force-overflow"></div>
-                </div>
+                </div> 
             </article>
             <aside>
-                <div class="boxcenter  slider" id="slider">
+                <div class="boxcenter  slider" id="slider" >
                     <div class="box slide">
                         <div class="box-img">
                             <img src="/img/banner2.jpg" alt="">
@@ -190,74 +118,7 @@
                             <span>Last sale: < 0,01 SOL</span>
                         </div>
                     </div>
-
-                    <div class="box slide">
-                        <div class="box-img">
-                            <img src="/img/banner2.jpg" alt="">
-                        </div>
-                        <div class="box-name">
-                            <a class="box-name-product" href="">Deamigos #4839</a>
-                            <a class="box-name-mv" href=""># 4.869</a>
-                        </div>
-                        <div class="box-price">
-                            <span>0,0098 SOL</span>
-                        </div>
-                        <div class="box-saleprice">
-                            <span>Last sale: < 0,01 SOL</span>
-                        </div>
-                    </div>
-
-                    <div class="box slide">
-                        <div class="box-img">
-                            <img src="/img/banner2.jpg" alt="">
-                        </div>
-                        <div class="box-name">
-                            <a class="box-name-product" href="">Deamigos #4839</a>
-                            <a class="box-name-mv" href=""># 4.869</a>
-                        </div>
-                        <div class="box-price">
-                            <span>0,0098 SOL</span>
-                        </div>
-                        <div class="box-saleprice">
-                            <span>Last sale: < 0,01 SOL</span>
-                        </div>
-                    </div>
-
-                    <div class="box slide">
-                        <div class="box-img">
-                            <img src="/img/banner2.jpg" alt="">
-                        </div>
-                        <div class="box-name">
-                            <a class="box-name-product" href="">Deamigos #4839</a>
-                            <a class="box-name-mv" href=""># 4.869</a>
-                        </div>
-                        <div class="box-price">
-                            <span>0,0098 SOL</span>
-                        </div>
-                        <div class="box-saleprice">
-                            <span>Last sale: < 0,01 SOL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Hai-->
-                <div class="boxcenter  slider" id="slider">
-                    <div class="box slide">
-                        <div class="box-img">
-                            <img src="/img/banner2.jpg" alt="">
-                        </div>
-                        <div class="box-name">
-                            <a class="box-name-product" href="">Deamigos #4839</a>
-                            <a class="box-name-mv" href=""># 4.869</a>
-                        </div>
-                        <div class="box-price">
-                            <span>0,0098 SOL</span>
-                        </div>
-                        <div class="box-saleprice">
-                            <span>Last sale: < 0,01 SOL</span>
-                        </div>
-                    </div>
-
+                    
                     <div class="box slide">
                         <div class="box-img">
                             <img src="/img/banner2.jpg" alt="">
@@ -308,7 +169,23 @@
                 </div>
 
                 <!--Hai-->
-                <div class="boxcenter  slider" id="slider">
+                <div class="boxcenter  slider" id="slider" >
+                    <div class="box slide">
+                        <div class="box-img">
+                            <img src="/img/banner2.jpg" alt="">
+                        </div>
+                        <div class="box-name">
+                            <a class="box-name-product" href="">Deamigos #4839</a>
+                            <a class="box-name-mv" href=""># 4.869</a>
+                        </div>
+                        <div class="box-price">
+                            <span>0,0098 SOL</span>
+                        </div>
+                        <div class="box-saleprice">
+                            <span>Last sale: < 0,01 SOL</span>
+                        </div>
+                    </div>
+                    
                     <div class="box slide">
                         <div class="box-img">
                             <img src="/img/banner2.jpg" alt="">
@@ -325,6 +202,57 @@
                         </div>
                     </div>
 
+                    <div class="box slide">
+                        <div class="box-img">
+                            <img src="/img/banner2.jpg" alt="">
+                        </div>
+                        <div class="box-name">
+                            <a class="box-name-product" href="">Deamigos #4839</a>
+                            <a class="box-name-mv" href=""># 4.869</a>
+                        </div>
+                        <div class="box-price">
+                            <span>0,0098 SOL</span>
+                        </div>
+                        <div class="box-saleprice">
+                            <span>Last sale: < 0,01 SOL</span>
+                        </div>
+                    </div>
+
+                    <div class="box slide">
+                        <div class="box-img">
+                            <img src="/img/banner2.jpg" alt="">
+                        </div>
+                        <div class="box-name">
+                            <a class="box-name-product" href="">Deamigos #4839</a>
+                            <a class="box-name-mv" href=""># 4.869</a>
+                        </div>
+                        <div class="box-price">
+                            <span>0,0098 SOL</span>
+                        </div>
+                        <div class="box-saleprice">
+                            <span>Last sale: < 0,01 SOL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Hai-->
+                <div class="boxcenter  slider" id="slider" >
+                    <div class="box slide">
+                        <div class="box-img">
+                            <img src="/img/banner2.jpg" alt="">
+                        </div>
+                        <div class="box-name">
+                            <a class="box-name-product" href="">Deamigos #4839</a>
+                            <a class="box-name-mv" href=""># 4.869</a>
+                        </div>
+                        <div class="box-price">
+                            <span>0,0098 SOL</span>
+                        </div>
+                        <div class="box-saleprice">
+                            <span>Last sale: < 0,01 SOL</span>
+                        </div>
+                    </div>
+                    
                     <div class="box slide">
                         <div class="box-img">
                             <img src="/img/banner2.jpg" alt="">
@@ -378,54 +306,48 @@
     </main>
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/logo-removebg-preview.png" alt="">
-                    <h3>LazyBees</h3>
-                    <p>
-                        NFT Music Flatform providing solutions for digital buying and exchange
-                    </p>
+          <div class="footer-content">
+            <div class="footer-logo">
+              <img src="img/logo-removebg-preview.png" alt="">
+              <h3>LazyBees</h3>
+              <p>
+                NFT Music Flatform providing solutions for digital buying and exchange
+              </p>
+            </div>
+            <div class="footer-links">
+                <p>Join the community</p>
+                <div class="links">
+                <a href=""><i class='bx bxl-github'></i></a>
+                <a href=""><i class='bx bxl-discord-alt' ></i></a>
+                <a href=""><i class='bx bxl-twitter' ></i></a>
+                <a href=""><i class='bx bxl-facebook' ></i></a>
                 </div>
-                <div class="footer-links">
-                    <p>Join the community</p>
-                    <div class="links">
-                        <a href="https://github.com/siphuc123/NFT_Music_Platforms"><i class='bx bxl-github'></i></a>
-                        <a href="https://discord.gg/n3JCcvXK"><i class='bx bxl-discord-alt'></i></a>
-                        <a href="https://twitter.com/BeesLazy"><i class='bx bxl-twitter'></i></a>
-                        <a href=""><i class='bx bxl-telegram'></i></a>
-                    </div>
+            </div>
+            <div class="footer-social">
+               <h3>Stay in the loot</h3>
+               <p>Join our mailing list to stay in 
+                the loop with our newest music releases and 
+                newest things about LB.</p>
+                <div class="login-email">
+                    <input type="text" placeholder="Your email address" name="email address">
+                    <button>Sign up</button>
                 </div>
-                <div class="footer-social">
-                    <h3>Stay in the loot</h3>
-                    <p>Join our mailing list to stay in
-                        the loop with our newest music releases and
-                        newest things about LB.</p>
-                    <div class="login-email">
-                        <input type="text" placeholder="  Your email address" name="email address">
-                        <button style="cursor: pointer;">Sign up</button>
-                    </div>
 
-                </div>
-                <div class="footer-bottom">
-
-                    <div class="line"> </div>
+            </div>
+            <div class="footer-bottom">
+                <div >
+                    <div class="line"></div>
                     <img src="img/c-removeb.png" alt="">
-                    <h4>2023 - LazyBees Team</h4>
-
+                   <h4>2023 - LazyBees Team</h4>
                     <div class="private">
                         <p>Privacy Policy</p>
                         <p>Terms of Service</p>
                     </div>
-
                 </div>
             </div>
+          </div>
         </div>
-    </footer>
-
-    <script src="js/connectWallet.js"></script>
-    <script src="js/script.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/main.js"></script> <!-- Gem jQuery -->
+      </footer>
+      <script src="/user.js"></script>
 </body>
-
 </html>
