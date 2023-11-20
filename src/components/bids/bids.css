@@ -125,7 +125,9 @@ font-weight: normal;
   .bids-container{
     width: 100%;
   }
-
- 
 }
 
+svg {
+  font-size: 24px;
+  cursor: pointer;
+}

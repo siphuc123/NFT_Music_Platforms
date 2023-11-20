@@ -48,7 +48,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>1</h4>
-                    <img src="img/collectimg2.jpg" alt="" />
+                    <img src={require("../../assets/bids1.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -64,7 +64,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>2</h4>
-                    <img src="img/collectimg.jpg" alt="" />
+                    <img src={require("../../assets/bids2.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -80,7 +80,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>3</h4>
-                    <img src="img/collectimg3.jpg" alt="" />
+                    <img src={require("../../assets/bids3.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -96,7 +96,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>4</h4>
-                    <img src="img/collectimg.jpg" alt="" />
+                    <img src={require("../../assets/bids4.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -112,7 +112,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>5</h4>
-                    <img src="img/collectimg3.jpg" alt="" />
+                    <img src={require("../../assets/bids5.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -129,7 +129,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>6</h4>
-                    <img src="img/collectimg3.jpg" alt="" />
+                    <img src={require("../../assets/bids6.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -145,7 +145,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>7</h4>
-                    <img src="img/collectimg.jpg" alt="" />
+                    <img src={require("../../assets/bids7.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -161,7 +161,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>8</h4>
-                    <img src="img/collectimg.jpg" alt="" />
+                    <img src={require("../../assets/bids1.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -177,7 +177,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>9</h4>
-                    <img src="img/collectimg.jpg" alt="" />
+                    <img src={require("../../assets/bids8.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>
@@ -193,23 +193,7 @@ const CollectionStat = () => {
                 <Link to="">
                   <div className="stt">
                     <h4>10</h4>
-                    <img src="img/collectimg2.jpg" alt="" />
-                  </div>
-                  <div className="name">Name</div>
-                  <div className="volume">0.001 SOL</div>
-                  <div className="change">--</div>
-                  <div className="floorprice">0.00 SOL</div>
-                  <div className="sales">1</div>
-                  <div className="iconstar">
-                    <AiFillStar />
-                  </div>
-                </Link>
-              </div>
-              <div className="allchainssoltable2">
-                <Link to="">
-                  <div className="stt">
-                    <h4>11</h4>
-                    <img src="../" alt="" />
+                    <img src={require("../../assets/bids3.png")} alt="" />
                   </div>
                   <div className="name">Name</div>
                   <div className="volume">0.001 SOL</div>

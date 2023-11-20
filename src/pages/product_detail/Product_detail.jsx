@@ -14,9 +14,6 @@ import baner3 from '../../assets/banner3.jpg'
 import baner1 from '../../assets/banner1.jpg'
 
 const Product_detail = () => {
-
-
-
   return( 
       <div className='product section__padding'>
           <section id="body-detail-item1" className="product-detail">
