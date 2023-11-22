@@ -19,7 +19,7 @@
     color: var(--Section2-color) !important;
 }
 
-section {
+.section {
     width: 100%;
     height: auto;
     padding: 100px 2% 10px 2%;

@@ -1,163 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Vidaloka;
-}
-
 :root {
-    --main-color: #24252D ;
+    --main-color: #24252D;
     --Section1-color: #2A2D3A;
     --Section2-color: #7D7C7C;
     --Section3-color: #191717;
-    --button-color:#F31559;
+    --button-color: #F31559;
     --section4--color: #ccc8aa;
 }
 
-
-
-li,
-a {
-    text-decoration: none;
-    list-style: none;
-}
-
 body {
-
-    min-height: 350px;
+    min-height: auto;
     background: var(--main-color);
-}
-
-header {
-    background: var(--Section1-color);
-    display: flex;
-    position: fixed;
-    padding: 15px 60px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-
-}
-
-.logo img {
-    width: 35px;
-    height: auto;
-}
-
-#int {
-    margin-top: 77px;
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.wrapper {
-    position: fixed;
-    width: 400px;
-    height: 440px;
-    margin-top: 10%;
-    margin-left: 36%;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    transform: scale(0);
-    transition: 0.35s ease;
-}
-
-.wrapper .icon-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35px;
-    height: 35px;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-left: 2px solid var(--Section3-color);
-    border-bottom: 2px solid var(--Section3-color);
-    border-right: none;
-    border-top: none;
-    border-bottom-left-radius: 10px;
-    background-color: var(--Section3-color);
-    color: white;
-}
-
-.wrapper.active-popup {
-    transform: scale(1);
-}
-
-.wrapper .form-box {
-    width: 100%;
-    padding: 40px;
-    background-color: var(--Section3-color);
-
-}
-
-.form-box h2 {
-    font-size: 1.5em;
-    color: white;
-    text-align: center;
-    padding-bottom: 5px;
-    border-bottom: 2px solid white;
-
-}
-
-.form-box img {
-    margin-left: 20px;
-    width: 20px;
-    height: 20px;
-}
-
-.form-box a {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 7px 0px 7px 0px;
-}
-
-.form-box a span {
-    margin-left: 15px;
-    color: white;
-    font-size: 1rem;
-}
-
-.Show {
-    margin-top: 20px;
-    cursor: pointer;
-    color: white;
-    background-color: var(--Section3-color);
-    width: 100%;
-    height: 30px;
-    border-top: 2px solid white;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    font-weight: 400;
-    font-size: 1.2rem;
-}
-
-.bx-cart {
-    color: whitesmoke;
-    font-size: 1.8rem; 
-}
-
-header .shopping {
-    margin-left: 30px;
 }
 
 /*body*/
@@ -214,7 +66,7 @@ header .shopping {
     width: 100%;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 20px ;
+    padding: 20px;
     flex-direction: column;
 }
 
@@ -248,7 +100,7 @@ header .shopping {
 .timer-user {
     width: 200px;
     display: flex;
-    font-size:  10px;
+    font-size: 10px;
     color: gray;
     margin-left: 30px;
 }
@@ -269,7 +121,7 @@ header .shopping {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:50px;
+    width: 50px;
     height: 40px;
     text-decoration: none;
     color: var(--section4--color);
@@ -314,10 +166,11 @@ header .shopping {
 
 
 .information-option ul li p {
-    padding-left:20px ;
+    padding-left: 20px;
     color: var(--section4--color);
-    -webkit-text-stroke: 1px #191717; /* Cho trình duyệt dựa trên WebKit (Chrome, Safari) */
-    fill: #191717; 
+    -webkit-text-stroke: 1px #191717;
+    /* Cho trình duyệt dựa trên WebKit (Chrome, Safari) */
+    fill: #191717;
 }
 
 .page {
@@ -325,8 +178,9 @@ header .shopping {
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
+
 .active {
-    max-height: 1000px; 
+    max-height: 1000px;
     transition: max-height 0.3s ease;
 }
 
@@ -492,6 +346,16 @@ header .shopping {
 
 }
 
+.search-collectl-item input {
+    box-shadow: 0 3px 3px 0;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 850px;
+    height: 35px;
+    padding-left: 50px;
+    background-color: transparent;
+}
+
 .search-collectl-item input::placeholder {
     color: var(--section4--color);
 }
@@ -533,12 +397,12 @@ header .shopping {
     border-radius: 15px;
 }
 
-.show-items-collectd { 
+.show-items-collectd {
     flex-wrap: wrap;
     text-align: center;
     align-items: center;
     justify-content: center;
-    display: flex;   
+    display: flex;
     height: 50px;
     align-content: space-between;
 }
@@ -584,7 +448,7 @@ header .shopping {
     justify-content: center;
 }
 
-.collect-sidebar ul li{
+.collect-sidebar ul li {
     background-color: white;
     width: 180px;
     height: 40px;
@@ -597,7 +461,7 @@ header .shopping {
 }
 
 .collect-sidebar ul li:hover {
-    background-color:  gray;
+    background-color: gray;
     transition: 0.3s ease;
 }
 
@@ -625,7 +489,7 @@ header .shopping {
     width: 80%;
     height: 450px;
     overflow: auto;
-    border: none; 
+    border: none;
     box-sizing: border-box;
 }
 
@@ -635,12 +499,12 @@ header .shopping {
 }
 
 .scrollable-frame::-webkit-scrollbar-thumb {
-    background-color: white; 
-    border-radius: 6px; 
+    background-color: white;
+    border-radius: 6px;
 }
 
 .scrollable-frame::-webkit-scrollbar-track {
-    background-color: transparent; 
+    background-color: transparent;
     border: 1px solid white;
     border-radius: 20px;
 }
@@ -684,7 +548,7 @@ header .shopping {
     object-fit: cover;
 }
 
-.favorite-item-box .favorite-item-title a{
+.favorite-item-box .favorite-item-title a {
     color: white;
 }
 
@@ -734,13 +598,19 @@ header .shopping {
     position: absolute;
     right: 10px;
     height: 30px;
-    top: 0 ;
+    top: 0;
     border-left: 1px solid rgba(0, 0, 0, 0.5);
     padding-left: 6px;
     padding-top: 2px;
 }
 
 /* favorited end*/
+
+
+/* Footer */
+footer {
+    margin-bottom: 0 !important;
+}
 
 /* Other */
 

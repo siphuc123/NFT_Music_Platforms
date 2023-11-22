@@ -5,13 +5,12 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 7rem;
   width: 100%;
   min-height: 800px;
 }
 
 .explore-container{
-    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -23,15 +22,34 @@
 }
 
 .chart-group{
+    cursor: pointer;
+    position: relative;
     width: 300px;
-    height: 350px;
-    background-color: black;
+    height: 270px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     margin: 30px 20px 5px 10px;
     border-radius: 10px;
 }
 
+.chart-group .anh{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.chart-group img {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: auto;
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
 .explore1{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .search{

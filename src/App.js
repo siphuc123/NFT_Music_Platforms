@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   Home,
   Profile,
-  Item,
   Login,
   Register,
   Collection,
   Feed,
-  ProductDetail
+  ProductDetail,
+  Explore
 } from "./pages";
 import { Navbar, Footer } from "./components";
 import "slick-carousel/slick/slick.css";
@@ -16,6 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import GetDetails from "./GetDetails";
 import Create from "./create_nfts";
+import ListAll from './ListAll'
 import { useEffect } from "react";
 import $ from "jquery";
 
@@ -131,15 +132,16 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path=":item/:id" element={<Item />} />
+          <Route path=":item/:id" element={<ProductDetail />} />
           <Route path="/create" element={<Create />} />
           <Route path="/collection" element={<Collection />} />
-          <Route path=":profile/:name" element={<Profile />} />
-          <Route path="/explore" element={<Collection />} />
+          <Route path="/profile/:name" element={<Profile />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/get-details" element={<GetDetails />} />
+          <Route path="/profile/:name/read" element={<ListAll/>} />
         </Routes>
         <Footer />
       </div>

@@ -4,17 +4,12 @@ import { Link } from "react-router-dom";
 // icon
 import { AiOutlineHeart } from "react-icons/ai";
 import {BiPlayCircle, BiShareAlt} from "react-icons/bi";
-
+import { FaEllipsisVertical } from "react-icons/fa6";
 // ------- image -------
-import jpg1 from "../../assets/1.jpg";
-/*music play end*/
-import jpg2 from "../../assets/2.jpg";
-import jpg4 from "../../assets/4.jpg";
-import jpg6 from "../../assets/6.jpg";
 import banner1 from "../../assets/banner1.jpg";
 import banner2 from "../../assets/banner2.jpg";
 import banner3 from "../../assets/banner3.jpg";
-import { FaEllipsisVertical } from "react-icons/fa6";
+
 
 const Bids = ({ title }) => {
   return (
@@ -28,7 +23,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>1</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/1.jpg")}  alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -50,7 +45,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>2</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/2.jpg")} alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -75,7 +70,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>3</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/3.jpg")} alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -97,7 +92,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>4</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/4.jpg")} alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -119,7 +114,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>5</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/5.jpg")} alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -144,7 +139,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>6</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/6.jpg")} alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -166,7 +161,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>7</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/7.jpg")} alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -188,7 +183,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>8</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/8.jpg")} alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -210,7 +205,7 @@ const Bids = ({ title }) => {
             <li className="songItem">
               <div className="music-ranking">
                 <span>9</span>
-                <img src="" alt="" />
+                <img src={require("../../assets/9.jpg")} alt="" />
                 <div className="name-rank-cus-ast">
                   <Link to="/item/nfts">
                     <h5>
@@ -233,7 +228,7 @@ const Bids = ({ title }) => {
               <div className="music-ranking">
                 <span>10</span>
                 <div className="fixer-position">
-                  <img src="" alt="" />
+                  <img src={require("../../assets/10.jpg")} alt="" />
                   <div className="name-rank-cus-ast">
                     <Link to="/item/nfts">
                       <h5>
@@ -278,7 +273,7 @@ const Bids = ({ title }) => {
                 <div className="musiclist">
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={jpg4} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/11.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -294,7 +289,7 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="11"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img src={banner3} alt="" />
+                        <img src={banner2} alt="" />
                         <div className="fress-fan-title">
                           <p>KindLord</p>
                           <p className="fan-title-red">mint 1 edition</p>
@@ -305,7 +300,7 @@ const Bids = ({ title }) => {
 
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={banner3} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/12.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -332,7 +327,7 @@ const Bids = ({ title }) => {
 
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={banner2} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/13.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -348,7 +343,7 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="13"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img src={banner3} alt="" />
+                        <img src={banner1} alt="" />
                         <div className="fress-fan-title">
                           <p>KindLord</p>
                           <p className="fan-title-red">mint 1 edition</p>
@@ -359,7 +354,7 @@ const Bids = ({ title }) => {
 
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={jpg1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/14.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -375,7 +370,7 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="14"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img src={banner3} alt="" />
+                        <img src={banner2} alt="" />
                         <div className="fress-fan-title">
                           <p>KindLord</p>
                           <p className="fan-title-red">mint 1 edition</p>
@@ -390,7 +385,7 @@ const Bids = ({ title }) => {
                 <div className="musiclist">
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={banner3} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/15.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -406,7 +401,7 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="15"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img src={banner3} alt="" />
+                        <img src={banner1} alt="" />
                         <div className="fress-fan-title">
                           <p>KindLord</p>
                           <p className="fan-title-red">mint 1 edition</p>
@@ -417,7 +412,7 @@ const Bids = ({ title }) => {
 
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={banner2} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/16.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <h5>
                           <p className="subtitle"></p>
@@ -442,7 +437,7 @@ const Bids = ({ title }) => {
 
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={jpg1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/17.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <h5>
                           <p className="subtitle"></p>
@@ -467,7 +462,7 @@ const Bids = ({ title }) => {
 
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={banner1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/18.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <h5>
                           <p className="subtitle"></p>
@@ -481,7 +476,7 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="18"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img src={banner3} alt="" />
+                        <img src={banner2} alt="" />
                         <div className="fress-fan-title">
                           <p>KindLord</p>
                           <p className="fan-title-red">mint 1 edition</p>
@@ -517,7 +512,7 @@ const Bids = ({ title }) => {
                 <div className="musiclist">
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={jpg1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/19.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -532,9 +527,9 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="19"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img className="recentimg" src={banner3} alt="" />
+                        <img className="recentimg" src={banner2} alt="" />
                         <img className="recentimg1" src={banner3} alt="" />
-                        <img className="recentimg2" src={banner3} alt="" />
+                        <img className="recentimg2" src={banner1} alt="" />
                         <div className="recent-title">
                           <p>12 mints</p>
                         </div>
@@ -543,7 +538,7 @@ const Bids = ({ title }) => {
                   </div>
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={jpg1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/20.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -559,8 +554,8 @@ const Bids = ({ title }) => {
                       </div>
                       <div className="fress-fan">
                         <img className="recentimg" src={banner3} alt="" />
-                        <img className="recentimg1" src={banner3} alt="" />
-                        <img className="recentimg2" src={banner3} alt="" />
+                        <img className="recentimg1" src={banner2} alt="" />
+                        <img className="recentimg2" src={banner1} alt="" />
                         <div className="recent-title">
                           <p>12 mints</p>
                         </div>
@@ -569,7 +564,7 @@ const Bids = ({ title }) => {
                   </div>
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={jpg1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/21.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -584,8 +579,8 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="21"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img className="recentimg" src={banner3} alt="" />
-                        <img className="recentimg1" src={banner3} alt="" />
+                        <img className="recentimg" src={banner1} alt="" />
+                        <img className="recentimg1" src={banner2} alt="" />
                         <img className="recentimg2" src={banner3} alt="" />
                         <div className="recent-title">
                           <p>12 mints</p>
@@ -595,7 +590,7 @@ const Bids = ({ title }) => {
                   </div>
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={jpg1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/22.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <Link to="/item/nfts">
                           <h5>
@@ -610,8 +605,8 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="22"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img className="recentimg" src={banner3} alt="" />
-                        <img className="recentimg1" src={banner3} alt="" />
+                        <img className="recentimg" src={banner1} alt="" />
+                        <img className="recentimg1" src={banner2} alt="" />
                         <img className="recentimg2" src={banner3} alt="" />
                         <div className="recent-title">
                           <p>12 mints</p>
@@ -626,7 +621,7 @@ const Bids = ({ title }) => {
                 <div className="musiclist">
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={jpg1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/23.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <h5>
                           <p className="subtitle"></p>
@@ -639,8 +634,8 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="23"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img className="recentimg" src={banner3} alt="" />
-                        <img className="recentimg1" src={banner3} alt="" />
+                        <img className="recentimg" src={banner1} alt="" />
+                        <img className="recentimg1" src={banner2} alt="" />
                         <img className="recentimg2" src={banner3} alt="" />
                         <div className="recent-title">
                           <p>12 mints</p>
@@ -650,7 +645,7 @@ const Bids = ({ title }) => {
                   </div>
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={banner1} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/24.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <h5>
                           <p className="subtitle"></p>
@@ -663,8 +658,8 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="24"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img className="recentimg" src={banner3} alt="" />
-                        <img className="recentimg1" src={banner3} alt="" />
+                        <img className="recentimg" src={banner1} alt="" />
+                        <img className="recentimg1" src={banner2} alt="" />
                         <img className="recentimg2" src={banner3} alt="" />
                         <div className="recent-title">
                           <p>12 mints</p>
@@ -674,7 +669,7 @@ const Bids = ({ title }) => {
                   </div>
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={banner2} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/25.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <h5>
                           <p className="subtitle"></p>
@@ -687,8 +682,8 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="25"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img className="recentimg" src={banner3} alt="" />
-                        <img className="recentimg1" src={banner3} alt="" />
+                        <img className="recentimg" src={banner1} alt="" />
+                        <img className="recentimg1" src={banner2} alt="" />
                         <img className="recentimg2" src={banner3} alt="" />
                         <div className="recent-title">
                           <p>12 mints</p>
@@ -698,7 +693,7 @@ const Bids = ({ title }) => {
                   </div>
                   <div className="musiclist-box">
                     <li className="songItem">
-                      <img src={banner3} alt="" className="musiclist-imgage" />
+                      <img src={require("../../assets/26.jpg")} alt="" className="musiclist-imgage" />
                       <div className="musiclist-cus-ast">
                         <h5>
                           <p className="subtitle"></p>
@@ -711,8 +706,8 @@ const Bids = ({ title }) => {
                         <BiPlayCircle id="26"></BiPlayCircle>
                       </div>
                       <div className="fress-fan">
-                        <img className="recentimg" src={banner3} alt="" />
-                        <img className="recentimg1" src={banner3} alt="" />
+                        <img className="recentimg" src={banner1} alt="" />
+                        <img className="recentimg1" src={banner2} alt="" />
                         <img className="recentimg2" src={banner3} alt="" />
                         <div className="recent-title">
                           <p>12 mints</p>

@@ -4,6 +4,7 @@ import {
   RiWallet2Line,
   RiShoppingCart2Line,
   RiSearchEyeLine,
+  RiXboxFill
 } from "react-icons/ri";
 import logo from "../../assets/logo-removebg.png";
 import item from "../../assets/1.jpg";
@@ -68,10 +69,6 @@ const Navbar = () => {
       showSlides((slideIndex += n));
     }
 
-    function currentSlide(n) {
-      showSlides((slideIndex = n));
-    }
-
     function showSlides(n) {
       let i;
       let x = document.getElementsByClassName(slideId);
@@ -98,14 +95,14 @@ const Navbar = () => {
 
     /*music */
 
-    const music = new Audio("audio/1.mp3");
+    const music = new Audio("../../assets/audio/1.mp3");
 
     const songs = [
       {
         id: "1",
         songName: ` At My Worst
   <p class="subtitle">Pink Sweats</p> `,
-        poster: "../../assets/1.jpg",
+        poster: "{require(`../../assets/1.jpg`)}",
       },
       {
         id: "2",
@@ -261,7 +258,7 @@ const Navbar = () => {
 
     Array.from(document.getElementsByClassName("songItem")).forEach(
       (element, i) => {
-        element.getElementsByTagName("img")[0].src = songs[i].poster;
+        // element.getElementsByTagName("img")[0].src = songs[i].poster;
         element.getElementsByTagName("h5")[0].innerHTML = songs[i].songName;
       }
     );
@@ -292,14 +289,6 @@ const Navbar = () => {
       );
     };
 
-    const makeAllBackgrounds = () => {
-      Array.from(document.getElementsByClassName("songItem")).forEach(
-        (element) => {
-          element.style.background = "rgb(105,105,170,0)";
-        }
-      );
-    };
-
     let index = 0;
     let poster_master_play = document.getElementById("poster_master_play");
     let title = document.getElementById("title");
@@ -310,11 +299,11 @@ const Navbar = () => {
           makeAllPlays();
           e.target.classList.remove("bx-play-circle");
           e.target.classList.add("bx-pause-circle");
-          music.src = `audio/${index}.mp3`;
-          poster_master_play.src = `img/${index}.jpg`;
+          music.src = `../../assets/audio/${index}.mp3`;
+          poster_master_play.src = `../../assets/${index}.jpg`;
           music.play();
           let song_title = songs.filter((ele) => {
-            return ele.id == index;
+            return ele.id === index;
           });
 
           song_title.forEach((ele) => {
@@ -380,7 +369,7 @@ const Navbar = () => {
     let vol_bar = document.getElementsByClassName("vol_bar")[0];
 
     vol.addEventListener("change", () => {
-      if (vol.value == 0) {
+      if (vol.value === 0) {
         vol_icon.classList.remove("bx-volume-full");
         vol_icon.classList.add("bx-volume-mute");
         vol_icon.classList.remove("bx-volume-low");
@@ -414,7 +403,7 @@ const Navbar = () => {
       poster_master_play.src = `../../assets/${index}.jpg`;
       music.play();
       let song_title = songs.filter((ele) => {
-        return ele.id == index;
+        return ele.id === index;
       });
 
       song_title.forEach((ele) => {
@@ -439,7 +428,7 @@ const Navbar = () => {
       poster_master_play.src = `../../assets/${index}.jpg`;
       music.play();
       let song_title = songs.filter((ele) => {
-        return ele.id == index;
+        return ele.id === index;
       });
 
       song_title.forEach((ele) => {
@@ -454,36 +443,13 @@ const Navbar = () => {
 
     /*Show music playlist  1*/
     const $ = document.querySelector.bind(document);
-    const $$ = document.querySelectorAll.bind(document);
 
-    const tab = $$(".box_content .myStt .details");
     const first = $(".idea .dashboard.first");
     console.log(first);
 
-    const content = tab.forEach(function (item, index) {
-      item.onclick = function () {
-        $(".box_content .myStt .details.active").classList.remove("active");
-        this.classList.add("active");
-
-        first.style.marginLeft = -100 * index + "%";
-      };
-    });
-
     /*Show music playlist  2*/
-    const tab1 = $$(".box_content1 .myStt1 .details1");
     const first1 = $(".idea1 .dashboard1.first1");
     console.log(first1);
-
-    const content1 = tab1.forEach(function (item, index) {
-      item.onclick = function () {
-        $(".box_content1 .myStt1 .details1.active5").classList.remove(
-          "active5"
-        );
-        this.classList.add("active5");
-
-        first1.style.marginLeft = -100 * index + "%";
-      };
-    });
   });
 
   const positionR = {
@@ -491,9 +457,6 @@ const Navbar = () => {
   };
   const JTF_B = {
     justifycontent: "space-between",
-  };
-  const FDC = {
-    flexdirection: "column",
   };
   return (
     <>
@@ -527,7 +490,7 @@ const Navbar = () => {
           <div id="otherButton" className="hide">
             <div className="After-logging-in">
               <Link to="/profile/PhucNguyen">
-                <img src="img/NFT-1.jpg" alt="" />
+                <img src={require("../../assets/NFT-1.jpg")} alt="" />
                 <span>Name</span>
               </Link>
               <p>13 SOL</p>
@@ -554,8 +517,8 @@ const Navbar = () => {
 
         <ul className="cd-cart-items">
           <li>
-            <div className="d-flex">
-              <img src={item} height="65px" width="auto" alt="" />
+            <div className="d-flex" style={{justifyContent: "flex-start"}}>
+              <img src={item} height="85px" width="auto" alt="" />
               <div>
                 <span className="cd-qty">At My Worst (Standard Edition)</span>{" "}
                 #2002
@@ -572,8 +535,8 @@ const Navbar = () => {
           </li>
 
           <li>
-            <div className="d-flex">
-              <img src={item} height="65px" width="auto" alt="" />
+            <div className="d-flex" style={{justifyContent: "flex-start"}}>
+              <img src={item} height="85px" width="auto" alt="" />
               <div>
                 <span className="cd-qty">At My Worst (Standard Edition)</span>{" "}
                 #2003
@@ -590,8 +553,8 @@ const Navbar = () => {
           </li>
 
           <li>
-            <div className="d-flex">
-              <img src={item} height="65px" width="auto" alt="" />
+            <div className="d-flex" style={{justifyContent: "flex-start"}}>
+              <img src={item} height="85px" width="auto" alt="" />
               <div>
                 <span className="cd-qty">
                   At My Worst{" "}
@@ -613,7 +576,7 @@ const Navbar = () => {
 
         <div className="cd-cart-total d-flex" style={JTF_B}>
           <p>Total:</p>
-          <div className="d-flex justify-content-center" style={FDC}>
+          <div className="d-flex justify-content-center" style={{flexDirection: "column"}}>
             <span>0.00321 SOL</span>
             <span className="cd-des">~= 0.20 USD</span>
           </div>
@@ -626,13 +589,13 @@ const Navbar = () => {
 
       <div className="wrapper">
         <span className="icon-close">
-          <i className="fa-solid fa-xmark"></i>
+          <RiXboxFill></RiXboxFill>
         </span>
         <div className="form-box login">
           <h2 className="shadow">CONNECT YOUR WALLET</h2>
           <form action="#">
-            <Link to="" onClick="connectWallet()">
-              <img src="img/Phantom-Icon_App_128x128.png" alt="" />{" "}
+            <Link to="" onClick="solanaConnect">
+              <img src={require("../../assets/Phantom-Icon_App_128x128.png")} alt="" />{" "}
               <span>Phantom Wallet</span>
             </Link>
             <Link to="">
@@ -643,10 +606,10 @@ const Navbar = () => {
               <span>WalletConnect</span>
             </Link>
             <Link to="">
-              <img src="img/Glow_Icon.png" alt="" /> <span>Glow</span>
+              <img src={require("../../assets/Glow_Icon.png")} alt="" /> <span>Glow</span>
             </Link>
             <Link to="">
-              <img src="img/soflare_Icon.png" alt="" /> <span>Solflare</span>
+              <img src={require("../../assets/solflare_Icon.png")} alt="" /> <span>Solflare</span>
             </Link>
             <Link to="">
               <img

@@ -11,7 +11,7 @@ const Feed = () => {
   return (
     <div>
       <>
-        <section>
+        <div className="section">
           <div className="box-class-left">
             <div className="information-option">
               <ul>
@@ -323,7 +323,7 @@ const Feed = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </>
     </div>
   );

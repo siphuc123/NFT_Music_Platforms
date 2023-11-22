@@ -12,12 +12,25 @@ import { FaAngleDown } from "react-icons/fa6";
 // ------- IMAGE -------
 import nft_1 from "../../assets/NFT-1.jpg";
 import jpg_17 from "../../assets/17.jpg";
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-  crossorigin="anonymous"
-/>;
+
+const showPage = (pageNumber) => {
+    // Phân chia nội dung
+      const pages = document.querySelectorAll(".page");
+      pages.forEach(function (page) {
+        page.classList.remove("active");
+      });
+
+      const selectedPage = document.getElementById(`page${pageNumber}`);
+      selectedPage.classList.add("active");
+
+      const listItems = document.querySelectorAll("li");
+      listItems.forEach(function (item) {
+        item.classList.remove("active");
+      });
+      document
+        .querySelector(`li:nth-child(${pageNumber})`)
+        .classList.add("active");
+}
 
 const Profile = () => {
   useEffect(() => {
@@ -59,24 +72,6 @@ const Profile = () => {
       }
     });
 
-    // Phân chia nội dung
-    function showPage(pageNumber) {
-      const pages = document.querySelectorAll(".page");
-      pages.forEach(function (page) {
-        page.classList.remove("active");
-      });
-
-      const selectedPage = document.getElementById(`page${pageNumber}`);
-      selectedPage.classList.add("active");
-
-      const listItems = document.querySelectorAll("li");
-      listItems.forEach(function (item) {
-        item.classList.remove("active");
-      });
-      document
-        .querySelector(`li:nth-child(${pageNumber})`)
-        .classList.add("active");
-    }
 
     // scoll trang và dừng khi kết thúc
     const scrollableFrame = document.getElementById("scrollable-frame");
@@ -161,16 +156,16 @@ const Profile = () => {
         <section className="information">
           <div className="information-option">
             <ul>
-              <li onclick="showPage(1)" class="active">
+              <li onClick={() => showPage(1)} class="active">
                 Items Collected <p>0</p>
               </li>
-              <li onclick="showPage(2)">Offers made</li>
-              <li onclick="showPage(3)">Deals</li>
-              <li onclick="showPage(4)">Favorited</li>
-              <li onclick="showPage(5)">
-                Created <p>7 Ss</p>
+              <li onClick={() => showPage(2)}>Offers made</li>
+              <li onClick={() => showPage(3)}>Deals</li>
+              <li onClick={() => showPage(4)}>Favorited</li>
+              <li onClick={() => showPage(5)}>
+                <Link to="/profile/PhucNguyen/read">Created <p>7 Ss</p></Link>
               </li>
-              <li onclick="showPage(6)">Activity</li>
+              <li onClick={() => showPage(6)}>Activity</li>
             </ul>
           </div>
           <div class="page active" id="page1">
@@ -424,7 +419,9 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <div class="page" id="page5"></div>
+          <div class="page" id="page5">
+            
+          </div>
           <div class="page" id="page6"></div>
         </section>
       </tbody>

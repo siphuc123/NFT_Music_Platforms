@@ -4,9 +4,6 @@ import creator from '../../assets/seller2.png'
 import item from '../../assets/item1.png'
 
 const Item = () => {
-
-
-
   return( 
       <div className='item section__padding'>
         <div className="item-image">

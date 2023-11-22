@@ -209,20 +209,6 @@ body {
     background: var(--main-color);
 }
 
-header {
-    background: var(--Section1-color);
-    display: flex;
-    position: fixed;
-    padding: 15px 60px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-
-}
-
 .logo img {
     width: 35px;
     height: auto;
@@ -273,7 +259,7 @@ header {
     position: fixed;
     width: 400px;
     height: 440px;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 36%;
     border-radius: 20px;
     backdrop-filter: blur(20px);
@@ -284,24 +270,14 @@ header {
     z-index: 999;
     transform: scale(0);
     transition: 0.35s ease;
+    border-radius: 20px;
 }
 
 .wrapper .icon-close {
     position: absolute;
-    top: 0;
+    top: -31px;
     right: 0;
     width: 35px;
-    height: 35px;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-left: 2px solid var(--Section3-color);
-    border-bottom: 2px solid var(--Section3-color);
-    border-right: none;
-    border-top: none;
-    border-bottom-left-radius: 10px;
-    background-color: var(--Section3-color);
     color: white;
 }
 
@@ -313,7 +289,7 @@ header {
     width: 100%;
     padding: 40px;
     background-color: var(--Section3-color);
-
+    border-radius: 20px;
 }
 
 .form-box h2 {
@@ -375,7 +351,7 @@ header {
 }
 
 .search-box button svg {
-    color: #068fff;
+    color: #FFFFFF;
     font-size: 1.55rem;
 }
 

@@ -7,3 +7,4 @@ export {default as Register} from './register/Register';
 export {default as Collection} from './collection/collectionstat';
 export {default as Feed} from './Feed/Feed'
 export {default as ProductDetail} from './product_detail/Product_detail'
+export {default as Explore} from './explore/Explore';

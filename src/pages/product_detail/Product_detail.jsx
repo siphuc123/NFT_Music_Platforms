@@ -7,7 +7,6 @@ import {BiSolidVolumeMute} from "react-icons/bi"
 import {AiOutlineHeart, AiFillPlayCircle, AiFillInfoCircle, AiFillEye, AiOutlineClockCircle} from "react-icons/ai"
 import {FaBarsStaggered, FaEllipsisVertical, FaIcons} from "react-icons/fa6"
 import {FaShoppingCart} from "react-icons/fa"
-import { Header } from '../../components';
 
 import baner0 from '../../assets/banner0.jpg'
 import baner3 from '../../assets/banner3.jpg'

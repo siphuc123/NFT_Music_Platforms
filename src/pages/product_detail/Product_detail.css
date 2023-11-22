@@ -209,20 +209,6 @@ body {
     background: var(--main-color);
 }
 
-header {
-    background: var(--Section1-color);
-    display: flex;
-    position: fixed;
-    padding: 15px 60px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-
-}
-
 .logo img {
     width: 35px;
     height: auto;
@@ -261,35 +247,6 @@ header {
 }
 
 
-
-.btnLogin-popup span {
-    justify-content: center;
-    align-items: center;
-}
-
-.btnLogin-popup {
-    color: var(--Section3-color);
-    width: 170px;
-    height: 45px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-left: 40px;
-    background: gray;
-    transition: 0.5s;
-}
-
-
-.btnLogin-popup:hover {
-    background: white;
-    color: var(--main-color);
-
-}
-
 #int {
     margin-top: 77px;
     height: 500px;
@@ -298,53 +255,6 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.wrapper {
-    position: fixed;
-    width: 400px;
-    height: 440px;
-    margin-top: 10%;
-    margin-left: 36%;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    transform: scale(0);
-    transition: 0.35s ease;
-}
-
-.wrapper .icon-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35px;
-    height: 35px;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-left: 2px solid var(--Section3-color);
-    border-bottom: 2px solid var(--Section3-color);
-    border-right: none;
-    border-top: none;
-    border-bottom-left-radius: 10px;
-    background-color: var(--Section3-color);
-    color: white;
-}
-
-.wrapper.active-popup {
-    transform: scale(1);
-}
-
-.wrapper .form-box {
-    width: 100%;
-    padding: 40px;
-    background-color: var(--Section3-color);
-
 }
 
 .form-box h2 {
@@ -395,18 +305,6 @@ header {
 
 header .search-box {
     position: relative;
-}
-
-.search-box input {
-    width: 300px;
-    height: 40px;
-    border: none;
-    outline: none;
-    background: #f2f2f2;
-    border-radius: 30px;
-    color: gray;
-    font-size: 15px;
-    padding: 20px 50px 20px 20px;
 }
 
 .search-box button {
