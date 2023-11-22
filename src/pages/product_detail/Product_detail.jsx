@@ -8,9 +8,12 @@ import {AiOutlineHeart, AiFillPlayCircle, AiFillInfoCircle, AiFillEye, AiOutline
 import {FaBarsStaggered, FaEllipsisVertical, FaIcons} from "react-icons/fa6"
 import {FaShoppingCart} from "react-icons/fa"
 
-import baner0 from '../../assets/banner0.jpg'
-import baner3 from '../../assets/banner3.jpg'
-import baner1 from '../../assets/banner1.jpg'
+import baner12 from '../../assets/banner12.jpg'
+import baner7 from '../../assets/banner7.jpg'
+import baner8 from '../../assets/banner8.jpg'
+import baner9 from '../../assets/banner9.jpg'
+
+
 
 const Product_detail = () => {
   return( 
@@ -51,7 +54,7 @@ const Product_detail = () => {
                                     </linearGradient>
                                     </defs>
                                 </svg>
-                            <span><p className="product-detail-coin">Chain:</p><p className="product-coin">SOL</p></span> 
+                                <span><p className="product-detail-coin">Chain:</p><p className="product-coin">SOL</p></span> 
                             </div>
                             <div className="product-link">
                               
@@ -143,7 +146,7 @@ const Product_detail = () => {
                     </div>
                     <div className="collection-product-box">
                         <div className="collection-product">
-                            <img src={baner3} alt="" />
+                            <img src={baner12} alt="" />
                             <div className="collection-product-price">
                                 <h4>Nuxros Alpha</h4>
                                 <h5>0.15 SOL</h5>
@@ -154,7 +157,7 @@ const Product_detail = () => {
                             </div>
                         </div>
                         <div className="collection-product">
-                            <img src={baner1} alt=""/>
+                            <img src={baner7} alt=""/>
                             <div className="collection-product-price">
                                 <h4>Nuxros Alpha</h4>
                                 <h5>0.15 SOL</h5>
@@ -165,7 +168,18 @@ const Product_detail = () => {
                             </div>
                         </div>
                         <div className="collection-product">
-                            <img src={baner0} alt=""/>
+                            <img src={baner8} alt=""/>
+                            <div className="collection-product-price">
+                                <h4>Nuxros Alpha</h4>
+                                <h5>0.15 SOL</h5>
+                                <p>Last Sale: 0.11 SOL</p>
+                            </div>
+                            <div className="collection-tag">
+                                <button>#1234</button>
+                            </div>
+                        </div>
+                        <div className="collection-product">
+                            <img src={baner9} alt=""/>
                             <div className="collection-product-price">
                                 <h4>Nuxros Alpha</h4>
                                 <h5>0.15 SOL</h5>
