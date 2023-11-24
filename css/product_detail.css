@@ -652,10 +652,9 @@ header .shopping {
 }
 
 .collection {
-    width: 1400px;
+        width: 100%;
     height: auto;
     padding: 100px 5%;
-    padding-left: 200px;
 }
 
 .collection-box {
