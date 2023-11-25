@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import {
   RiWallet2Line,
   RiShoppingCart2Line,
   RiSearchEyeLine,
-  RiXboxFill
+  RiXboxFill,
 } from "react-icons/ri";
 import logo from "../../assets/logo-removebg.png";
 import item from "../../assets/1.jpg";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { clusterApiUrl, Connection, PublicKey } from "@solana/web3.js";
+import { PhantomWalletAdapter } from "@solana/wallet-adapter-phantom";
 
 const Menu = () => (
   <>
@@ -19,6 +22,77 @@ const Menu = () => (
 );
 
 const Navbar = () => {
+  const xKey = "aeAo1Ko09G0c-YCC"; //enter your x api key here
+  const [wallID, setWallID] = useState(
+    "78oZPkEVDvpm7DUXHC1ceLPqjazFU4joKzWF3reBWY6"
+  );
+  const [network, setNetwork] = useState("devnet");
+
+  const [isLoaded, setLoaded] = useState(false);
+  const [dataFetched, setDataFetched] = useState();
+
+  const [connStatus, setConnStatus] = useState(false);
+
+  const solanaConnect = async () => {
+    console.log("clicked solana connect");
+    const { solana } = window;
+    if (!solana) {
+      alert("Please Install Solana");
+    }
+
+    try {
+      //const network = "devnet";
+      const phantom = new PhantomWalletAdapter();
+      await phantom.connect();
+      const rpcUrl = clusterApiUrl(network);
+      const connection = new Connection(rpcUrl, "confirmed");
+      const wallet = {
+        address: phantom.publicKey.toString(),
+      };
+
+      if (wallet.address) {
+        console.log(wallet.address);
+        setWallID(wallet.address);
+        const accountInfo = await connection.getAccountInfo(
+          new PublicKey(wallet.address),
+          "confirmed"
+        );
+        console.log(accountInfo);
+        setConnStatus(true);
+        document.getElementById("WalletID").innerHTML = wallet.address;
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const fetchNFTs = (e) => {
+    e.preventDefault();
+
+    //Note, we are not mentioning update_authority here for now
+    let nftUrl = `https://api.shyft.to/sol/v1/nft/read_all?network=${network}&address=${wallID}`;
+    axios({
+      // Endpoint to send files
+      url: nftUrl,
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": xKey,
+      },
+      // Attaching the form data
+    })
+      // Handle the response from backend here
+      .then((res) => {
+        console.log(res.data);
+        setDataFetched(res.data);
+        setLoaded(true);
+      })
+
+      // Catch errors if any
+      .catch((err) => {
+        console.warn(err);
+      });
+  };
   // const [toggleMenu, setToggleMenu] = useState(false);
   // const [user, setUser] = useState(false);
 
@@ -33,21 +107,13 @@ const Navbar = () => {
     /*Wapprer */
     const wrapper = document.querySelector(".wrapper");
     const btnPopup = document.querySelector(".btnLogin-popup");
+    const connectPhantom = document.querySelector(".ConnectPhantom");
     const iconClose = document.querySelector(".icon-close");
     const otherButton = document.querySelector("#otherButton");
 
-    btnPopup.addEventListener("click", () => {
+    connectPhantom.addEventListener("click", () => {
       btnPopup.classList.add("hide");
-    });
-    btnPopup.addEventListener("click", () => {
       otherButton.classList.add("show");
-    });
-
-    otherButton.addEventListener("click", () => {
-      otherButton.classList.add("show");
-    });
-    otherButton.addEventListener("click", () => {
-      btnPopup.classList.add("hide");
     });
 
     btnPopup.addEventListener("click", () => {
@@ -443,13 +509,36 @@ const Navbar = () => {
 
     /*Show music playlist  1*/
     const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
 
+    const tab = $$(".box_content .myStt .details");
     const first = $(".idea .dashboard.first");
     console.log(first);
 
+    const content = tab.forEach(function (item, index) {
+      item.onclick = function () {
+        $(".box_content .myStt .details.active").classList.remove("active");
+        this.classList.add("active");
+
+        first.style.marginLeft = -100 * index + "%";
+      };
+    });
+
     /*Show music playlist  2*/
+    const tab1 = $$(".box_content1 .myStt1 .details1");
     const first1 = $(".idea1 .dashboard1.first1");
     console.log(first1);
+
+    const content1 = tab1.forEach(function (item, index) {
+      item.onclick = function () {
+        $(".box_content1 .myStt1 .details1.active5").classList.remove(
+          "active5"
+        );
+        this.classList.add("active5");
+
+        first1.style.marginLeft = -100 * index + "%";
+      };
+    });
   });
 
   const positionR = {
@@ -489,9 +578,9 @@ const Navbar = () => {
           </button>
           <div id="otherButton" className="hide">
             <div className="After-logging-in">
+              <img src={require("../../assets/NFT-1.jpg")} alt="" />
               <Link to="/profile/PhucNguyen">
-                <img src={require("../../assets/NFT-1.jpg")} alt="" />
-                <span>Name</span>
+                <span id="WalletID"></span>
               </Link>
               <p>13 SOL</p>
             </div>
@@ -517,7 +606,7 @@ const Navbar = () => {
 
         <ul className="cd-cart-items">
           <li>
-            <div className="d-flex" style={{justifyContent: "flex-start"}}>
+            <div className="d-flex" style={{ justifyContent: "flex-start" }}>
               <img src={item} height="85px" width="auto" alt="" />
               <div>
                 <span className="cd-qty">At My Worst (Standard Edition)</span>{" "}
@@ -535,7 +624,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <div className="d-flex" style={{justifyContent: "flex-start"}}>
+            <div className="d-flex" style={{ justifyContent: "flex-start" }}>
               <img src={item} height="85px" width="auto" alt="" />
               <div>
                 <span className="cd-qty">At My Worst (Standard Edition)</span>{" "}
@@ -553,7 +642,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <div className="d-flex" style={{justifyContent: "flex-start"}}>
+            <div className="d-flex" style={{ justifyContent: "flex-start" }}>
               <img src={item} height="85px" width="auto" alt="" />
               <div>
                 <span className="cd-qty">
@@ -576,7 +665,10 @@ const Navbar = () => {
 
         <div className="cd-cart-total d-flex" style={JTF_B}>
           <p>Total:</p>
-          <div className="d-flex justify-content-center" style={{flexDirection: "column"}}>
+          <div
+            className="d-flex justify-content-center"
+            style={{ flexDirection: "column" }}
+          >
             <span>0.00321 SOL</span>
             <span className="cd-des">~= 0.20 USD</span>
           </div>
@@ -594,8 +686,11 @@ const Navbar = () => {
         <div className="form-box login">
           <h2 className="shadow">CONNECT YOUR WALLET</h2>
           <form action="#">
-            <Link to="" onClick="solanaConnect">
-              <img src={require("../../assets/Phantom-Icon_App_128x128.png")} alt="" />{" "}
+            <Link to="" onClick={solanaConnect} className="ConnectPhantom">
+              <img
+                src={require("../../assets/Phantom-Icon_App_128x128.png")}
+                alt=""
+              />{" "}
               <span>Phantom Wallet</span>
             </Link>
             <Link to="">
@@ -606,10 +701,12 @@ const Navbar = () => {
               <span>WalletConnect</span>
             </Link>
             <Link to="">
-              <img src={require("../../assets/Glow_Icon.png")} alt="" /> <span>Glow</span>
+              <img src={require("../../assets/Glow_Icon.png")} alt="" />{" "}
+              <span>Glow</span>
             </Link>
             <Link to="">
-              <img src={require("../../assets/solflare_Icon.png")} alt="" /> <span>Solflare</span>
+              <img src={require("../../assets/solflare_Icon.png")} alt="" />{" "}
+              <span>Solflare</span>
             </Link>
             <Link to="">
               <img

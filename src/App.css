@@ -1,30 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
 
 * {
-  font-family: 'Vidaloka',sans-serif;
+  font-family: 'Vidaloka', sans-serif;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Vidaloka, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Vidaloka, sans-serif;
 }
 
 :root {
-    --main-color: #24252D;
-    --Section1-color: #24252D;
-    --Section2-color: #7D7C7C;
-    --Section3-color: #191717;
-    --button-color: #F31559;
-    --section4--color: #ccc8aa;
+  --main-color: #24252D;
+  --Section1-color: #24252D;
+  --Section2-color: #7D7C7C;
+  --Section3-color: #191717;
+  --button-color: #F31559;
+  --section4--color: #ccc8aa;
 }
 
-.grd-back
-{
-  background: #8E2DE2;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.grd-back {
+  background: #8E2DE2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
 
 }
@@ -65,98 +67,99 @@
   opacity: .5;
 }
 
-.nft-card
-{
+.nft-card {
   border-radius: 15px;
   border: 1px solid white;
 }
 
-.card-image
-{
+.card-image {
   width: 100%;
   height: 240px;
   margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 15px;
 }
-.nft-card a
-{
+
+.nft-card a {
   text-decoration: none;
   color: #FFFFFF;
 }
 
-.attr-crd
-{
+.attr-crd {
   border: 1px solid white;
   display: inline-block;
   padding: 10px;
   border-radius: 5px;
 }
-.attr-crd h6
-{
+
+.attr-crd h6 {
   font-size: 0.8em;
   opacity: 0.7;
 }
-.attr-crd h5
-{
+
+.attr-crd h5 {
   font-size: 0.9em;
   margin-bottom: -1px;
 
 }
 
-body{
+body {
   background: var(--color-bg);
   scroll-behavior: smooth;
 }
 
 li,
 a {
-    text-decoration: none;
-    list-style: none;
+  text-decoration: none;
+  list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-.gradient__bg{
- 
- /* ff 3.6+ */
- background:-moz-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+.gradient__bg {
 
- /* safari 5.1+,chrome 10+ */
- background:-webkit-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 
- /* opera 11.10+ */
- background:-o-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 
- /* ie 10+ */
- background:-ms-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  /* opera 11.10+ */
+  background: -o-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 
- /* global 92%+ browsers support */
- background:radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  /* ie 10+ */
+  background: -ms-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 
 
 }
-.gradient__text{
+
+.gradient__text {
   background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.section__padding{
+
+.section__padding {
   padding: 4rem 6rem;
 }
-.section__margin{
+
+.section__margin {
   margin: 4rem 6rem;
 }
+
 .scale-up-center {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -183,29 +186,38 @@ div {
 }
 
 .After-logging-in {
+  position: relative;
   display: flex;
-  width: 170px;
+  width: 200px;
   height: 45px;
-  border-radius: 40px;
+  border-radius: 10px;
   background-color: #D9D9D9;
   margin-left: 250px;
   background: gray;
   transition: 0.5s;
 }
 
+.After-logging-in span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .After-logging-in a {
+  margin-left: 4px;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #191717;
-  border-left: 1px solid black;
+  border-right: 2px solid black;
 }
 
-.After-logging-in a img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+.After-logging-in img {
+  width: auto;
+  height: 44px;
+  margin-right: 2px;
+  border-radius: 30% 0 0 30%;
   object-fit: cover;
 }
 
@@ -214,48 +226,53 @@ div {
   width: 50%;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid black;
 }
 
 p {
   margin-bottom: 0 !important;
 }
 
- @-webkit-keyframes scale-up-center {
+@-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
+
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
+
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
+
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
 
-@media screen and (max-width: 700px){
-  .section__padding{
-    padding:4rem 6rem;
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem 6rem;
   }
-  .section__margin{
-   margin:4rem;
+
+  .section__margin {
+    margin: 4rem;
   }
 }
-@media screen and (max-width: 550px){
-  .section__padding{
+
+@media screen and (max-width: 550px) {
+  .section__padding {
     padding: 4rem 2rem !important;
   }
-  .section__margin{
-   margin:4rem 2rem;
+
+  .section__margin {
+    margin: 4rem 2rem;
   }
 }
